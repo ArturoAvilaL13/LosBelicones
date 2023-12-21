@@ -1,0 +1,2 @@
+Carpeta pages
+Se colocaran todos los archivos con extension .html
