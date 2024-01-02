@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "losBelicones",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.3.2"
-  }
+  "license": "ISC"
 }
