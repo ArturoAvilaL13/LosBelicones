@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
+  --fuente-texto: "Rubik", sans-serif;
+  --tamano-titulos-pc: 4em;
+  --tamano-titulos-moviles: 1.375em;
+  --tamano-sub-navegacion-pc: 1.5em;
+  --tamano-sub-navegacion-moviles: 1em;
+  --color-textos: #ffff;
+  --color-fondo: #860606;
+}
+
+/* body {
+  color: var(--color-textos);
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-texto);
+} */
+
+.titulo-pc {
+  font-size: var(--tamano-titulos-pc);
+}
+
+.texto-navegacion {
+  font-family: var(--fuente-texto);
+  color: var(--color-textos);
+}
+
+.titulo-pc,
+.subtitulo-pc {
+  font-family: var(--fuente-titulos-subtitulos);
+  color: var(--color-textos);
+}
+.subtitulo-pc,
+.texto-navegacion {
+  font-size: var(--tamano-sub-navegacion-pc);
+}
+/*
+ ? Se debe incluir lo siguiente en todos los documentos
+ ~ Link a la fuente de Rubik mono one
+ <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular" rel="stylesheet" />
+ ~ Link a la fuente de Rubik
+ <link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+*/
