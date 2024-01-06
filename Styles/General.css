@@ -13,11 +13,11 @@
   --color-fondo: #860606;
 }
 
-body {
+/* body {
   color: var(--color-textos);
   background-color: var(--color-fondo);
   font-family: var(--fuente-texto);
-}
+} */
 
 .titulo-pc {
   font-size: var(--tamano-titulos-pc);
@@ -31,6 +31,7 @@ body {
 .titulo-pc,
 .subtitulo-pc {
   font-family: var(--fuente-titulos-subtitulos);
+  color: var(--color-textos);
 }
 .subtitulo-pc,
 .texto-navegacion {
