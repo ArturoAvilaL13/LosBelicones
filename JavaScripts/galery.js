@@ -3,51 +3,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
     const videoIndicator = document.getElementById('videoIndicator');
+    const videoCounter = document.getElementById('videoCounter'); // Agregado
 
-    
     const videos = [
-        { src: '../vid/video1.mp4', name: 'WORKSHOPS Y TALLERES...', description: 'Atréte a vivir una de nuestras experiencias, te aseguramos será única' },
-        { src: '../vid/video2.mp4', name: 'CALIDAD INIGUALABLE...', description: 'Junto a profesionales en el tema aprende desde lo más básico hasta lo más complejo ' },
-        { src: '../vid/video3.mp4', name: 'EXPERIENCIA FAMILIAR...', description: 'Comparte con nosotros y junto a tu familia y amigos nuestra pasión por la carne' },
-        { src: '../vid/video4.mp4', name: 'AMPLIA TU CONOCIMIENTO...', description: 'Conoce los diferentes cortes de carne que manejamos' },
-        { src: '../vid/video5.mp4', name: 'DISFRUTA...', description: 'Prueba y disfruta del corte de tu preferencia' },
-        { src: '../vid/video6.mp4', name: 'SABOREA...', description: 'Te aseguramos que nuestros expertos te deleitaran ' },
-        { src: '../vid/video7.mp4', name: 'OBSERVA...', description: 'Puedes observar cómo es que se elabora un buen corte' },
-        { src: '../vid/video8.mp4', name: 'TE VAS A ENAMORAR...', description: 'Porque de la vista y el olfato nace el amor' },
-        { src: '../vid/video9.mp4', name: 'CONOCE...', description: 'Nuestras mejores técnicas de cocina' },
-        { src: '../vid/video10.MP4', name: 'PRUEBA...', description: 'Ese corte que tanto has soñado' },
-        { src: '../vid/video11.mp4', name: 'MUCHO MÁS QUE SOLO SABOR...', description: 'Siempre un paso adelante que las texturas y sabores de siempre' },
-        { src: '../vid/video12.mp4', name: 'NUESTRA PASIÓN', description: 'Porque nosotros tambien nacimos para la comida, en especial para la carne' },
-        { src: '../vid/video13.mp4', name: '¿TE ESPERAMOS...?', description: 'Si aún estas dudando en visitarnos, aquí tienes una razón más para animarte' },
-        { src: '../vid/video14.mp4', name: 'ELEGANCIA...', description: 'Uno de nuestros sellos además del sabor y calidad' },
-
-        
+        { src: 'https://www.youtube.com/embed/TIZUOwIDsms?si=KryCHeGqeuNUd3JP', title: 'Chilaquiles de Diezmillo Especiales - Chefsita Andy', description: 'En este su primer receta en video, Chefsita Andy nos enseña una deliciosa versión de los chilaquiles verdes, con Diezmillo de Meet Meat y un toque especial para niños.' },
+        { src: 'https://www.youtube.com/embed/JOYZDTpn4bg?si=W-bDq4m9f7YH780C', title: 'Somos Meet Meat', description: 'Esto y mucho más es Meet Meat' },
+       
     ];
 
     videos.forEach((video, index) => {
         const videoItem = document.createElement('div');
         videoItem.classList.add('video-item');
 
-        const videoElement = document.createElement('video');
+        const videoElement = document.createElement('iframe');
         videoElement.src = video.src;
-        videoElement.setAttribute('controls', true);
+        videoElement.width = 745;//560
+        videoElement.height = 421;//315
+        videoElement.title = 'YouTube video player';
+        videoElement.frameborder = 0;
+        videoElement.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        videoElement.allowfullscreen = true;
 
-        const videoInfo = document.createElement('div');
-        videoInfo.classList.add('video-info');
+        videoItem.appendChild(videoElement);
+
+        const descriptionContainer = document.createElement('div');
+        descriptionContainer.classList.add('description-container');
 
         const titleElement = document.createElement('h3');
         titleElement.classList.add('video-title');
-        titleElement.textContent = video.name;
+        titleElement.textContent = video.title;
 
         const descriptionElement = document.createElement('p');
         descriptionElement.classList.add('video-description');
         descriptionElement.textContent = video.description;
 
-        videoInfo.appendChild(titleElement);
-        videoInfo.appendChild(descriptionElement);
-
-        videoItem.appendChild(videoElement);
-        videoItem.appendChild(videoInfo);
+        descriptionContainer.appendChild(titleElement);
+        descriptionContainer.appendChild(descriptionElement);
+        videoItem.appendChild(descriptionContainer);
 
         videoCarousel.appendChild(videoItem);
 
@@ -79,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         videoCarousel.style.transform = `translateX(-${currentIndex * (videoWidth + 20)}px)`;
 
-        
         updateIndicator();
+        updateVideoCounter();
     }
 
     function updateIndicator() {
@@ -93,5 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
 
+    function updateVideoCounter() {
+        videoCounter.textContent = `${currentIndex + 1} / ${videos.length}`;
+    }
+});
