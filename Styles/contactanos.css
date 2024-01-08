@@ -1,0 +1,54 @@
+:root {
+  --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
+  --fuente-texto: "Rubik", sans-serif;
+  --color-textos: #ffff;
+  --color-fondo: #860606;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100vw;
+  min-height: 80vh;
+  max-height: fit-content;
+  background-color: #860606;
+  text-align: center;
+  padding: 30px 30px;
+}
+
+.titulo {
+  grid-area: 1 / 1 / 2 / 6;
+}
+#camposEntrada {
+  grid-area: 2 / 1 / 6 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh;
+  padding: 40px 40px;
+}
+
+#camposEntrada > div {
+  width: 40vw;
+}
+
+#camposEntrada > div > input,
+#camposEntrada > div > label {
+  font-family: var(--fuente-texto);
+}
+
+#camposEntrada > button {
+  background-color: #290106;
+  color: #ffff;
+  font-family: var(--fuente-texto);
+}
+#horariosAtencion {
+  grid-area: 2 / 4 / 4 / 6;
+}
+#ubicacion {
+  grid-area: 4 / 4 / 6 / 6;
+}
