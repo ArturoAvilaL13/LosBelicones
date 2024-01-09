@@ -1,0 +1,47 @@
+.container{
+    background-color: #1B0101;
+
+}
+.arriba{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+   
+}
+
+.bonitobox{
+    flex: 1 0 30vw;
+}
+
+.contacto{
+    text-align: center;
+}
+
+.logofooter{
+    height: 80px;
+    padding-left: 20px;
+}
+
+.icons-redes{
+    width: 25px;
+    height: 25px;
+    color: aliceblue;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    gap: 3vw;
+
+}
+
+.abajo{
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+}
