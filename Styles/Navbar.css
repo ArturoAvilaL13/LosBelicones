@@ -1,12 +1,13 @@
-body, html{
+nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
     width: 100%;
-    height: 100%;
-}
-
-.fondo{
+    height: 120px;
+    padding: 10px 10px;
     background-color: #1B0101;
 }
 
-#logoNavbar{
+.logonav{
     height: 100px;
 }
