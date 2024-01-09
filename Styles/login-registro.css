@@ -12,10 +12,7 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-#header {
-  height: 100px;
-  background-color: blue;
-}
+
 
 #content {
   padding: 40px;
@@ -27,11 +24,6 @@ html {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-}
-
-#footer {
-  height: 100px;
-  background-color: blue;
 }
 
 #content > img {
