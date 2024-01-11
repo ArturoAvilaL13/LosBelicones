@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  :root {
+    --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
+    --fuente-texto: "Rubik", sans-serif;
+    --tamano-titulos-pc: 4em;
+    --tamano-titulos-moviles: 1.375em;
+    --tamano-sub-navegacion-pc: 1.5em;
+    --tamano-sub-navegacion-moviles: 1em;
+    --color-textos: #ffff;
+    --color-fondo: #860606;
+  }
+  
+    body,html {
+    color: var(--color-textos);
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-texto);
+  } 
+
+  #header {
+    height: 100px;
+    display: flex; 
+    align-items: center;
+    justify-content: right;
+    background-color: blue;
+  }
+  
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #ffff;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color:#ffffff;
+    color: #000000;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: var(--color-fondo);
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px #000000;;
+    border-radius: 10px;
+    
+}
+
+
+
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.hidden{
+    display: none;
+}
