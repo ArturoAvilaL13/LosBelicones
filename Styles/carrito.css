@@ -28,8 +28,8 @@
   }
   
 .icon-cart{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     stroke: #ffff;
 }
 
@@ -57,8 +57,8 @@ header{
     top: 55%;
     right: 0;
 
-    background-color:#ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff; 
     width: 25px;
     height: 25px;
 
