@@ -9,15 +9,16 @@
   --tamano-titulos-moviles: 1.375em;
   --tamano-sub-navegacion-pc: 1.5em;
   --tamano-sub-navegacion-moviles: 1em;
+  --tamano-footer-pc: .8em;
   --color-textos: #ffff;
   --color-fondo: #860606;
 }
 
-/* body {
+ body {
   color: var(--color-textos);
   background-color: var(--color-fondo);
   font-family: var(--fuente-texto);
-} */
+} 
 
 .titulo-pc {
   font-size: var(--tamano-titulos-pc);
@@ -37,6 +38,29 @@
 .texto-navegacion {
   font-size: var(--tamano-sub-navegacion-pc);
 }
+
+.texto-footer{
+  font-family: var(--fuente-texto);
+  font-size: var(--tamano-footer-pc);
+  color: var(--color-textos);
+}
+
+
+.noHipervinvulo{
+  text-decoration: none;
+  color: var(--color-textos);
+}
+
+.nav{
+  width: 100% !important;
+  height: 120px !important;
+}
+
+.footer{
+  width: 100% !important;
+  height: 125px !important;
+}
+
 /*
  ? Se debe incluir lo siguiente en todos los documentos
  ~ Link a la fuente de Rubik mono one
