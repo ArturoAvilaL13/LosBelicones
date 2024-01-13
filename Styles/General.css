@@ -75,7 +75,8 @@ nav{
 
 .footer {
   width: 100% !important;
-  height: 125px !important;
+  max-height: 130px !important;
+  background-color: blue;
 }
 
 

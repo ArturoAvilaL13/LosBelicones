@@ -1,6 +1,7 @@
 #container {
   width: 100%;
   overflow-x: hidden;
+  background-color: #1b0101;
 }
 #content {
   display: flex;
