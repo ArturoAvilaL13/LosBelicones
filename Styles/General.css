@@ -10,7 +10,11 @@
   --tamano-footer-pc: 0.8em;
   --color-textos: #fcf1f1;
   --color-fondo: #860606;
+<<<<<<< HEAD
+  --color-navbar-footer: #1B0101;
+=======
   --color-fondo-secundario: #eb953f;
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
 }
 
 .color-fondo {
@@ -50,14 +54,23 @@
   color: var(--color-textos);
 }
 
+<<<<<<< HEAD
+.noHipervinvulo{
+=======
 .noHipervinvulo {
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
   text-decoration: none;
   color: var(--color-textos);
 }
 
+<<<<<<< HEAD
+nav{
+=======
 .nav {
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
   width: 100% !important;
-  height: 120px !important;
+  height: 90px !important;
+  background-color: var(--color-navbar-footer);
 }
 
 .footer {
@@ -65,6 +78,8 @@
   max-height: 130px !important;
   background-color: blue;
 }
+
+
 
 /*
  ? Se debe incluir lo siguiente en todos los documentos
