@@ -1,0 +1,26 @@
+#container {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: fit-content;
+  background-color: black;
+}
+#content {
+  width: 100%;
+  min-height: 800px;
+  max-height: fit-content;
+  padding: 60px 30px;
+  background-color: #860606;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+}
+.card {
+  background: none;
+  border: none;
+  width: 80vw;
+  min-height: 25vh;
+  max-height: fit-content;
+  text-align: center;
+}

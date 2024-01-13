@@ -5,24 +5,32 @@
 :root {
   --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
   --fuente-texto: "Rubik", sans-serif;
-  --tamano-titulos-pc: 4em;
-  --tamano-titulos-moviles: 1.375em;
-  --tamano-sub-navegacion-pc: 1.5em;
-  --tamano-sub-navegacion-moviles: 1em;
-  --tamano-footer-pc: .8em;
-  --color-textos: #ffff;
+  --tamano-titulos-pc: 1.875em; /*30px*/
+  --tamano-sub-navegacion-pc: 0.938em; /*15px*/
+  --tamano-footer-pc: 0.8em;
+  --color-textos: #fcf1f1;
   --color-fondo: #860606;
+<<<<<<< HEAD
   --color-navbar-footer: #1B0101;
+=======
+  --color-fondo-secundario: #eb953f;
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
 }
 
- body {
-  color: var(--color-textos);
+.color-fondo {
   background-color: var(--color-fondo);
-  font-family: var(--fuente-texto);
-} 
+}
 
-.titulo-pc {
+.color-fondo-secundario {
+  background-color: var(--color-fondo-secundario);
+}
+
+.titulo {
   font-size: var(--tamano-titulos-pc);
+}
+
+.texto-justificado {
+  text-align: justify;
 }
 
 .texto-navegacion {
@@ -30,34 +38,42 @@
   color: var(--color-textos);
 }
 
-.titulo-pc,
-.subtitulo-pc {
+.titulo,
+.subtitulo {
   font-family: var(--fuente-titulos-subtitulos);
   color: var(--color-textos);
 }
-.subtitulo-pc,
+.subtitulo,
 .texto-navegacion {
   font-size: var(--tamano-sub-navegacion-pc);
 }
 
-.texto-footer{
+.texto-footer {
   font-family: var(--fuente-texto);
   font-size: var(--tamano-footer-pc);
   color: var(--color-textos);
 }
 
+<<<<<<< HEAD
 .noHipervinvulo{
+=======
+.noHipervinvulo {
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
   text-decoration: none;
   color: var(--color-textos);
 }
 
+<<<<<<< HEAD
 nav{
+=======
+.nav {
+>>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
   width: 100% !important;
   height: 90px !important;
   background-color: var(--color-navbar-footer);
 }
 
-.footer{
+.footer {
   width: 100% !important;
   height: 125px !important;
 }
