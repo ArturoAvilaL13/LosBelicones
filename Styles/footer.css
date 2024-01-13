@@ -2,6 +2,7 @@
   height: 130px;
   width: 100%;
   background-color: #1b0101;
+  overflow: hidden;
 }
 
 .arriba {
@@ -68,5 +69,27 @@
     justify-content: end;
     padding-right: 10px;
     gap: 3vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .arriba {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+  }
+  .logofooter {
+    height: 80px;
+    padding-left: 0;
+  }
+  .redes {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5px;
+    gap: 2vw;
   }
 }
