@@ -22,17 +22,7 @@ body{
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  margin: 0;
-}
-:root {
-    --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
-    --fuente-texto: "Rubik", sans-serif;
-    --tamano-titulos-pc: 4em;
-    --tamano-titulos-moviles: 1.375em;
-    --tamano-sub-navegacion-pc: 1.5em;
-    --tamano-sub-navegacion-moviles: 1em;
-    --color-textos: #ffff;
-    --color-fondo: #860606;
+  margin: auto;
 }
 
 
@@ -44,12 +34,7 @@ body{
   padding: 10px;
   }
 
-  #footer {
-    width: 100%;
-    background-color: blue;
-    text-align: center;
-    padding: 10px;
-  }
+
 
 
 h1 { font-size: 4rem;
@@ -71,7 +56,7 @@ p{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: repeat(7, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 50px;
   grid-row-gap: 15px;
   }
   
