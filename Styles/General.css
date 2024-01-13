@@ -12,6 +12,7 @@
   --tamano-footer-pc: .8em;
   --color-textos: #ffff;
   --color-fondo: #860606;
+  --color-navbar-footer: #1B0101;
 }
 
  body {
@@ -45,21 +46,23 @@
   color: var(--color-textos);
 }
 
-
 .noHipervinvulo{
   text-decoration: none;
   color: var(--color-textos);
 }
 
-.nav{
+nav{
   width: 100% !important;
-  height: 120px !important;
+  height: 90px !important;
+  background-color: var(--color-navbar-footer);
 }
 
 .footer{
   width: 100% !important;
   height: 125px !important;
 }
+
+
 
 /*
  ? Se debe incluir lo siguiente en todos los documentos

@@ -45,3 +45,24 @@
     height: 20px;
     text-align: center;
 }
+
+@media only screen and (max-width: 1024px) {
+    #perritos {
+      flex-wrap: wrap;
+      padding: 30px 0;
+      justify-content: space-around;
+      gap: 30px 0;
+    }
+    #tarjeta {
+      margin: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+ 
+  }
+  
+  
+  
+  @media only screen and (max-width: 430px) {
+  }
