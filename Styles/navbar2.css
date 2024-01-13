@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  align-content: center;
+}
+
+/* Color fondo, clase de Bootstrap */
+.offcanvas {
+  background-color: #400118;
+}
+
+/* tamanho del logo img */
+.logo-nav {
+  width: 125px;
+}
+/* 
+// Le da color al link de la pagina actual, de bootstrap 
+.navbar-nav .nav-link.active {
+  color: var(--color-textos);
+}
+
+// Le da color a todos los links, de bootstrap
+.nav-link {
+  color: var(--color-textos);
+  font-size: var(--tamano-sub-navegacion-pc);
+  font-family: var(--fuente-texto);
+} */
+
+/* icono hamburguesa, clase de bootstrap */
+.navbar-toggler-icon {
+  width: 25px;
+}
+
+.navbar-toggler {
+  background-color: #eb953f;
+  border: 3px solid #eb6434;
+  border-radius: 7px;
+}
+
+.nav-low {
+  height: 2px;
+  width: 100vw;
+  background-color: #eb953f;
+}
+
+.btn-close {
+  color: white;
+  background-color: #fcf1f1;
+}
+
+/* @media only screen and (max-width: 1024px) {
+ 
+}
+@media only screen and (max-width: 430px) {
+} */

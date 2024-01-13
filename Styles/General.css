@@ -2,63 +2,90 @@
   padding: 0;
   margin: 0;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #860606 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #eb953f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #860606;
+  border-radius: 10px;
+  border: 3px groove #1b0101;
+}
 :root {
   --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
   --fuente-texto: "Rubik", sans-serif;
-  --tamano-titulos-pc: 4em;
-  --tamano-titulos-moviles: 1.375em;
-  --tamano-sub-navegacion-pc: 1.5em;
-  --tamano-sub-navegacion-moviles: 1em;
-  --tamano-footer-pc: .8em;
-  --color-textos: #ffff;
+  --tamano-titulos-pc: 1.875em; /*30px*/
+  --tamano-sub-navegacion-pc: 0.938em; /*15px*/
+  --tamano-footer-pc: 0.8em;
+  --color-textos: #fcf1f1;
   --color-fondo: #860606;
+  --color-navbar-footer: #1b0101;
 }
 
- body {
-  color: var(--color-textos);
+.color-fondo {
   background-color: var(--color-fondo);
-  font-family: var(--fuente-texto);
-} 
+}
 
-.titulo-pc {
-  font-size: var(--tamano-titulos-pc);
+.color-fondo-secundario {
+  background-color: var(--color-fondo-secundario);
+}
+
+.titulo {
+  font-size: var(--tamano-titulos-pc) !important;
+}
+
+.texto-justificado {
+  text-align: justify;
 }
 
 .texto-navegacion {
-  font-family: var(--fuente-texto);
-  color: var(--color-textos);
+  font-family: var(--fuente-texto) !important;
+  color: var(--color-textos) !important;
 }
 
-.titulo-pc,
-.subtitulo-pc {
-  font-family: var(--fuente-titulos-subtitulos);
-  color: var(--color-textos);
+.titulo,
+.subtitulo {
+  font-family: var(--fuente-titulos-subtitulos) !important;
+  color: var(--color-textos) !important;
 }
-.subtitulo-pc,
+.subtitulo,
 .texto-navegacion {
-  font-size: var(--tamano-sub-navegacion-pc);
+  font-size: var(--tamano-sub-navegacion-pc) !important;
 }
 
-.texto-footer{
-  font-family: var(--fuente-texto);
-  font-size: var(--tamano-footer-pc);
-  color: var(--color-textos);
+.texto-footer {
+  font-family: var(--fuente-texto) !important;
+  font-size: var(--tamano-footer-pc) !important;
+  color: var(--color-textos) !important;
 }
 
-
-.noHipervinvulo{
-  text-decoration: none;
-  color: var(--color-textos);
+.noHipervinvulo {
+  text-decoration: none !important;
+  color: var(--color-textos) !important;
 }
 
-.nav{
+.nav {
   width: 100% !important;
-  height: 120px !important;
+  height: 90px !important;
+  background-color: var(--color-navbar-footer) !important;
 }
 
-.footer{
+.footer {
   width: 100% !important;
-  height: 125px !important;
+  max-height: 130px !important;
+  background-color: blue;
 }
 
 /*

@@ -13,13 +13,13 @@ html {
   scroll-behavior: smooth;
 }
 
-
 #content {
   padding: 40px;
   min-height: 900px;
   max-height: fit-content;
   background: url(../img/DSC00361.jpg), #860606;
   background-blend-mode: multiply;
+  background-position: center center;
   display: flex;
   justify-content: start;
   align-items: center;
