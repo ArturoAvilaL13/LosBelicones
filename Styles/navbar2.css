@@ -1,70 +1,56 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-nav{
-    align-content: center;
+nav {
+  align-content: center;
 }
-
-:root {
-    --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
-    --fuente-texto: "Rubik", sans-serif;
-    --tamano-titulos-pc: 4em;
-    --tamano-titulos-moviles: 1.375em;
-    --tamano-sub-navegacion-pc: 1.5em;
-    --tamano-sub-navegacion-moviles: 1em;
-    --tamano-nav-pc: 1em;
-    --tamano-footer-pc: .8em;
-    --color-textos: #ffff;
-    --color-fondo: #860606;
-    --color-navbar-footer: #1B0101;
-  }
 
 /* Color fondo, clase de Bootstrap */
-  .offcanvas{
-    background-color: #400118;
+.offcanvas {
+  background-color: #400118;
 }
 
 /* tamanho del logo img */
-.logo-nav{
-    width: 125px;
+.logo-nav {
+  width: 125px;
+}
+/* 
+// Le da color al link de la pagina actual, de bootstrap 
+.navbar-nav .nav-link.active {
+  color: var(--color-textos);
 }
 
-/* Le da color al link de la pagina actual, de bootstrap */
-.navbar-nav .nav-link.active  {
-    color: var(--color-textos)
-}
-
-/* Le da color a todos los links, de bootstrap*/
-.nav-link{
-    color: var(--color-textos);
-    font-size: var(--tamano-sub-navegacion-pc);
-    font-family: var(--fuente-texto);
-}
-
-
+// Le da color a todos los links, de bootstrap
+.nav-link {
+  color: var(--color-textos);
+  font-size: var(--tamano-sub-navegacion-pc);
+  font-family: var(--fuente-texto);
+} */
 
 /* icono hamburguesa, clase de bootstrap */
-.navbar-toggler-icon{
-    width: 25px;
-
+.navbar-toggler-icon {
+  width: 25px;
 }
 
-.navbar-toggler{
-    background-color: #EB953F;
-    border: 3px solid #EB6434;
-    border-radius: 7px;
+.navbar-toggler {
+  background-color: #eb953f;
+  border: 3px solid #eb6434;
+  border-radius: 7px;
 }
 
-.nav-low{
-    height: 2px;
-    width: 100vw;
-    background-color: #EB953F;
+.nav-low {
+  height: 2px;
+  width: 100vw;
+  background-color: #eb953f;
 }
 
+.btn-close {
+  color: white;
+  background-color: #fcf1f1;
+}
 
- 
 /* @media only screen and (max-width: 1024px) {
  
 }

@@ -1,7 +1,6 @@
 #container {
   width: 100%;
   overflow-x: hidden;
-  background-color: #1b0101;
 }
 #content {
   display: flex;
@@ -10,25 +9,42 @@
   flex-direction: column;
   text-align: center;
   padding: 30px 0px;
+  background: url("../img/LOGO\ MEET\ MEAT\ SIN\ FONDO\ BLANCO-02.png") center
+    center no-repeat;
+  background-size: auto;
+  background-position-y: 10px;
+  background-color: #400118;
 }
 #perritos {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
+  width: vw;
   min-height: 90vh;
   max-height: fit-content;
   flex-flow: row wrap;
   padding: 15px 15px;
 }
+#header {
+  background-color: #1b0101;
+  height: fit-content;
+}
 
 #tarjeta {
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 450px;
+  height: 400px;
   overflow: hidden;
   margin: 15px 15px;
-  overflow-y: hidden;
+  border: solid #eb953f 3px;
+  border-radius: 84px 84px 168px 168px / 45px 45px 22px 22px;
+  background: url(../img/fondocarbon.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.texto-tarjeta {
+  padding: 10px 10px;
 }
 
 .image {
@@ -65,6 +81,8 @@
   height: 100%;
   opacity: 0.8;
   transition: 0.5s;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 #tarjeta:hover .image {

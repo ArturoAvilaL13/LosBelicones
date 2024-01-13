@@ -20,10 +20,83 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Styles/acercaDeBelicones.css" />
+    <link rel="stylesheet" href="../Styles/navbar2.css" />
   </head>
   <body>
     <div id="container">
-      <div id="header">header</div>
+      <div id="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="../img/logo1.png"
+                alt="MeetMeat"
+                target="_parent"
+                class="logo-nav"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                  Meet Meat
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="texto-navegacion nav-link"
+                      aria-current="page"
+                      href="#"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active texto-navegacion" href="#"
+                      >Acerca de Belicones</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#"
+                      >Steack Garage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Workshop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Vídeos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Contactos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-low"></div>
+      </div>
       <div id="content" class="color-fondo">
         <h1 class="titulo">Acerca de los Belicones</h1>
         <div id="perritos">
@@ -37,10 +110,14 @@
               <div class="card-body">
                 <h5 class="subtitulo">Arturo Avila Lopez</h5>
                 <h6 class="subtitulo">Desarrollador Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta texto-tarjeta">
                   <p class="card-text texto-navegacion">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Como parte del equipo de Los Belicones me siento feliz de
+                    haber conocido a estas grandes personas y de haber
+                    contribuido dentro de todas las partes del proyecto apoyando
+                    siempre a mis compañeros resolviendo sus dudas o dando algún
+                    consejo que tal vez podría ajustarse un poco mejor al
+                    proyecto.
                   </p>
                 </div>
               </div>
@@ -56,7 +133,7 @@
               <div class="card-body">
                 <h5 class="subtitulo">Ana Karen Bailón Fernández</h5>
                 <h6 class="subtitulo">Desarrollador Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta">
                   <p class="card-text texto-navegacion">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -75,10 +152,19 @@
               <div class="card-body">
                 <h5 class="subtitulo">Elizabeth Razo Kerber</h5>
                 <h6 class="subtitulo">Desarrollador Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta">
                   <p class="card-text texto-navegacion">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Como desarrollador, me siento muy satisfecho con mi
+                    contribución al proyecto, específicamente en el diseño y
+                    desarrollo del navbar y Footer. Desde el principio, me
+                    esforcé por aplicar las mejores prácticas y utilizar
+                    tecnologías vistas durante el bootcamp de Generation México,
+                    para garantizar un navbar y footer altamente funcionales y
+                    estéticamente atractivos. Trabajé de cerca con todos los
+                    miembros del equipo, asegurándome de que la integración del
+                    navbar y footer estuviera bien integrado. Estoy contenta de
+                    haber contribuido de manera positiva al éxito general del
+                    proyecto.
                   </p>
                 </div>
               </div>
@@ -94,10 +180,18 @@
               <div class="card-body">
                 <h5 class="subtitulo">Marco Antonio Díaz</h5>
                 <h6 class="subtitulo">Desarrollador Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta">
                   <p class="card-text texto-navegacion">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Como ingeniero en telecomunicaciones, sistemas y
+                    electrónica, tengo un gusto muy grande por la tecnología y
+                    la innovación, es por ello que me entusiasma mucho el
+                    desarrollo de nuevos proyectos que pongan a prueba mis
+                    conocimientos y capacidades. Gracias a que tengo afinidad
+                    con la programación en algunos lenguajes, el trabajar con
+                    toda la parte de back-end, en este caso con JavaScript, es
+                    algo que me hace sentir que estoy aportando valor a los
+                    proyectos en los que me toca participar y este no ha sido la
+                    excepción.
                   </p>
                 </div>
               </div>
@@ -113,9 +207,14 @@
               <div class="card-body">
                 <h5 class="subtitulo">Rubén Alemán Reyes</h5>
                 <h6 class="subtitulo">Desarrollador Frontend Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta">
                   <p class="card-text texto-navegacion">
-                    Gracias a mi carrera como diseñador, me he convertido en un ávido entusiasta del desarrollo frontend con un enfoque especializado en la estetica y la creación de interfaces de usuario atractivas y funcionales. Manteniéndome al día con las últimas tendencias, incorporo HTML5, CSS3 y JavaScript, con un enfoque inicial en React para el desarrollo frontend.
+                    Gracias a mi carrera como diseñador, me he convertido en un
+                    ávido entusiasta del desarrollo frontend con un enfoque
+                    especializado en la estetica y la creación de interfaces de
+                    usuario atractivas y funcionales. Manteniéndome al día con
+                    las últimas tendencias, incorporo HTML5, CSS3 y JavaScript,
+                    con un enfoque inicial en React para el desarrollo frontend.
                   </p>
                 </div>
               </div>
@@ -131,7 +230,7 @@
               <div class="card-body">
                 <h5 class="subtitulo">Jonathan Yonuel Guerrero</h5>
                 <h6 class="subtitulo">Desarrollador Java jr.</h6>
-                <div class="texto-justificado">
+                <div class="texto-justificado texto-tarjeta">
                   <p class="card-text texto-navegacion">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -142,6 +241,7 @@
           </div>
         </div>
       </div>
+      <div class="nav-low"></div>
       <div>
         <iframe
           src="../pages/footer.html"

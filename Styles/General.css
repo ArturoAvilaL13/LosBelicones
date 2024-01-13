@@ -2,6 +2,27 @@
   padding: 0;
   margin: 0;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #860606 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #eb953f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #860606;
+  border-radius: 10px;
+  border: 3px groove #1b0101;
+}
 :root {
   --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
   --fuente-texto: "Rubik", sans-serif;
@@ -10,11 +31,7 @@
   --tamano-footer-pc: 0.8em;
   --color-textos: #fcf1f1;
   --color-fondo: #860606;
-<<<<<<< HEAD
-  --color-navbar-footer: #1B0101;
-=======
-  --color-fondo-secundario: #eb953f;
->>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
+  --color-navbar-footer: #1b0101;
 }
 
 .color-fondo {
@@ -26,7 +43,7 @@
 }
 
 .titulo {
-  font-size: var(--tamano-titulos-pc);
+  font-size: var(--tamano-titulos-pc) !important;
 }
 
 .texto-justificado {
@@ -34,43 +51,35 @@
 }
 
 .texto-navegacion {
-  font-family: var(--fuente-texto);
-  color: var(--color-textos);
+  font-family: var(--fuente-texto) !important;
+  color: var(--color-textos) !important;
 }
 
 .titulo,
 .subtitulo {
-  font-family: var(--fuente-titulos-subtitulos);
-  color: var(--color-textos);
+  font-family: var(--fuente-titulos-subtitulos) !important;
+  color: var(--color-textos) !important;
 }
 .subtitulo,
 .texto-navegacion {
-  font-size: var(--tamano-sub-navegacion-pc);
+  font-size: var(--tamano-sub-navegacion-pc) !important;
 }
 
 .texto-footer {
-  font-family: var(--fuente-texto);
-  font-size: var(--tamano-footer-pc);
-  color: var(--color-textos);
+  font-family: var(--fuente-texto) !important;
+  font-size: var(--tamano-footer-pc) !important;
+  color: var(--color-textos) !important;
 }
 
-<<<<<<< HEAD
-.noHipervinvulo{
-=======
 .noHipervinvulo {
->>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
-  text-decoration: none;
-  color: var(--color-textos);
+  text-decoration: none !important;
+  color: var(--color-textos) !important;
 }
 
-<<<<<<< HEAD
-nav{
-=======
 .nav {
->>>>>>> 2872727b49b9c6ad2321fb80214f1b168b367852
   width: 100% !important;
   height: 90px !important;
-  background-color: var(--color-navbar-footer);
+  background-color: var(--color-navbar-footer) !important;
 }
 
 .footer {
@@ -78,8 +87,6 @@ nav{
   max-height: 130px !important;
   background-color: blue;
 }
-
-
 
 /*
  ? Se debe incluir lo siguiente en todos los documentos
