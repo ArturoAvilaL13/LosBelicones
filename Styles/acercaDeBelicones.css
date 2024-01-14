@@ -8,11 +8,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 30px 0px;
-  background: url("../img/LOGO\ MEET\ MEAT\ SIN\ FONDO\ BLANCO-02.png") center
-    center no-repeat;
-  background-size: auto;
-  background-position-y: 10px;
+  padding: 30px 15px;
   background-color: #400118;
 }
 #perritos {
@@ -91,9 +87,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  #content {
-    background-position-y: 25vh;
-  }
   #perritos {
     flex-wrap: wrap;
     padding: 30px 0;
@@ -106,9 +99,6 @@
 }
 
 @media only screen and (max-width: 430px) {
-  #content {
-    background-image: none;
-  }
   #perritos {
     flex-wrap: nowrap;
     flex-direction: column;
