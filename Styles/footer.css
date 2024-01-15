@@ -33,6 +33,19 @@
   color: aliceblue;
 }
 
+
+/* hovers para iconos de redes */
+.bi-facebook:hover{
+color: #102fdd;
+}
+
+.bi-instagram:hover{
+  color: #fd093e;
+}
+.bi-whatsapp:hover{
+    color: #11c92a;
+}
+
 .redes {
   display: flex;
   align-items: center;
