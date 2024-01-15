@@ -16,18 +16,21 @@ nav {
 .logo-nav {
   width: 125px;
 }
-/* 
-// Le da color al link de la pagina actual, de bootstrap 
-.navbar-nav .nav-link.active {
-  color: var(--color-textos);
+
+/* color de link de pagina actuak */
+.active{
+  color: #E0351B !important;
 }
 
-// Le da color a todos los links, de bootstrap
-.nav-link {
-  color: var(--color-textos);
-  font-size: var(--tamano-sub-navegacion-pc);
-  font-family: var(--fuente-texto);
-} */
+/* Mantiene el color de link sobre la pagina actual */
+.active.active:hover{
+  color: #E0351B !important;
+}
+
+/* cambia el color de link donde pase el cursor */
+.nav-link:hover {
+  color: #eb953f !important;
+}
 
 /* icono hamburguesa, clase de bootstrap */
 .navbar-toggler-icon {
@@ -47,8 +50,7 @@ nav {
 }
 
 .btn-close {
-  color: white;
-  background-color: #fcf1f1;
+  background-color: #EB953F;
 }
 
 /* @media only screen and (max-width: 1024px) {

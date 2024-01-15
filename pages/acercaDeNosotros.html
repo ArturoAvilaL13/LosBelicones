@@ -20,10 +20,82 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Styles/acercaDeNosotros.css" />
+    <link rel="stylesheet" href="../Styles/navbars.css">
   </head>
   <body>
     <div id="container">
-      <div class="header">header</div>
+      <div class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="../img/logo1.png"
+                alt="MeetMeat"
+                target="_parent"
+                class="logo-nav"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                  Meet Meat
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="texto-navegacion nav-link"
+                      aria-current="page"
+                      href="#"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active texto-navegacion" href="#"
+                      >Acerca de Belicones</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#"
+                      >Steack Garage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Workshop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Vídeos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link texto-navegacion" href="#">Contactos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
       <div id="content">
         <h1 class="titulo-pc">Acerca de nosotros</h1>
 
@@ -154,7 +226,14 @@
           </div>
         </div>
       </div>
-      <div class="footer">footer</div>
+      <div class="nav-low"></div>
+      <div>
+        <iframe
+          src="../pages/footer.html"
+          frameborder="0"
+          class="footer"
+        ></iframe>
+      </div>
     </div>
 
     <script
