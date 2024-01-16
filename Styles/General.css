@@ -76,10 +76,15 @@
   color: var(--color-textos) !important;
 }
 
+#header {
+  background-color: var(--color-navbar-footer);
+  height: fit-content;
+}
+
 .nav {
   width: 100% !important;
   height: 90px !important;
-  background-color: var(--color-navbar-footer) !important;
+  /* background-color: var(--color-navbar-footer) !important; */
 }
 
 .footer {

@@ -7,6 +7,10 @@ nav {
   align-content: center;
 }
 
+hr {
+  border: 1px solid #D9D9D9;
+}
+
 /* Color fondo, clase de Bootstrap */
 .offcanvas {
   background-color: #400118;
@@ -23,9 +27,9 @@ nav {
 }
 
 /* Mantiene el color de link sobre la pagina actual */
-.active.active:hover{
+/* .active.active:hover{
   color: #E0351B !important;
-}
+} */
 
 /* cambia el color de link donde pase el cursor */
 .nav-link:hover {
@@ -53,8 +57,61 @@ nav {
   background-color: #EB953F;
 }
 
-/* @media only screen and (max-width: 1024px) {
- 
+
+/* CARRITO */
+
+/* para que el circulo contador se mantenga sobre la carnita */
+.container-icon{
+  position: relative;
+  background-color: #eb6434;
 }
-@media only screen and (max-width: 430px) {
-} */
+
+.icon-cart{
+  width: 70px;
+  height: 65px;
+  stroke: #ffff;
+}
+
+.icon-cart:hover{
+  cursor: pointer;
+}
+
+/* circulo para contar productos */
+.count-products{
+  position: absolute;
+  top: 55%;
+  right: 0;
+
+  background-color: #000000;
+  color: #ffffff; 
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  border-radius: 50%;
+}
+
+.container-cart-products{
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1b0101;
+  width: 400px;
+  /* z-index: 1; */
+  box-shadow: 0 10px 20px #000000;;
+  border-radius: 10px;
+  
+}
+
+.hidden-cart{
+  display: none;
+}
+
+.cart-empty{
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+/* FIN CARRITO */
