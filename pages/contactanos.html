@@ -20,7 +20,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Styles/contactanos.css" />
-    <link rel="stylesheet" href="../Styles/navbars.css">
+    <link rel="stylesheet" href="../Styles/navbars.css" />
   </head>
   <body>
     <div id="container">
@@ -75,7 +75,7 @@
                       >Inicio</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
                     <a class="nav-link texto-navegacion" href="#"
                       >Acerca de Belicones</a
@@ -86,24 +86,20 @@
                       >Acerca de Meet Meat</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
                     <a class="nav-link texto-navegacion" href="#"
                       >Steak Garage</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="#"
-                      >Workshop</a
-                    >
+                    <a class="nav-link texto-navegacion" href="#">Workshop</a>
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="#"
-                      >Blog</a
-                    >
+                    <a class="nav-link texto-navegacion" href="#">Blog</a>
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
                     <a class="nav-link active texto-navegacion" href="#"
                       >Contáctanos</a
@@ -117,45 +113,50 @@
         <div class="nav-low"></div>
       </div>
       <div id="content">
-        <h1 class="titulo-pc titulo">contáctanos</h1>
+        <h1 class="titulo">contáctanos</h1>
         <div id="camposEntrada">
+          <h2 class="subtitulo">Queremos saber tu opinión</h2>
           <div class="form-floating">
             <textarea
-              class="form-control"
+              class="form-control borde-modificado texto-navegacion"
               placeholder="Leave a comment here"
               id="comentarios"
               style="height: 100px"
             ></textarea>
-            <label for="comentarios">Comments</label>
+            <label for="comentarios" class="texto-navegacion no-fondo"
+              >Comments</label
+            >
           </div>
-
           <div class="form-floating mb-3">
             <input
               type="text"
-              class="form-control"
+              class="form-control borde-modificado texto-navegacion"
               id="nombre"
               placeholder=""
             />
-            <label for="nombre">nombre</label>
+            <label for="nombre" class="texto-navegacion">nombre</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="email"
-              class="form-control"
+              class="form-control borde-modificado texto-navegacion"
               id="email"
               placeholder=""
             />
-            <label for="email">Email</label>
+            <label for="email" class="texto-navegacion">Email</label>
           </div>
 
           <button type="button" class="btn">Enviar</button>
         </div>
         <div id="horariosAtencion">
-          <h6 class="subtitulo-pc">Horarios de atención</h6>
-          <p class="texto-navegacion">Lunes a Viernes 9:00 a 21:00 hrs</p>
-          <p class="texto-navegacion">Sábados 10:00 a 21:00 hrs</p>
-          <p class="texto-navegacion">Domingos 12:00 a 18:00 hrs</p>
+          <div class="horarios">
+            <h6 class="subtitulo">Horarios de atención</h6>
+            <div class="nav-low"></div>
+            <p class="texto-navegacion">Lunes a Viernes 9:00 a 21:00 hrs</p>
+            <p class="texto-navegacion">Sábados 10:00 a 21:00 hrs</p>
+            <p class="texto-navegacion">Domingos 12:00 a 18:00 hrs</p>
+          </div>
         </div>
         <div id="ubicacion">
           <iframe
