@@ -95,7 +95,7 @@
 
 .nav-low, .foot-up {
   height: 2px;
-  width: 100vw;
+  width: 100%;
   background-color: #eb953f;
 }
 

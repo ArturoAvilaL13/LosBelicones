@@ -4,7 +4,7 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 100vw;
+  width: 100%;
   min-height: 80vh;
   max-height: fit-content;
   background-color: #400118;
@@ -54,6 +54,7 @@ input:focus {
 }
 #horariosAtencion {
   grid-area: 2 / 4 / 4 / 6;
+  text-align: start;
 }
 .horarios {
   max-width: fit-content;
