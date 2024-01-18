@@ -19,18 +19,31 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Styles/General.css" />
-    <link rel="stylesheet" href="../Styles/navbar2.css" />
+    <link rel="stylesheet" href="../Styles/navbars.css" />
   </head>
   <body>
-    <nav class="navbar fixed-top">
+    <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="../index.html"
           ><img
             src="../img/logo1.png"
             alt="MeetMeat"
             target="_parent"
             class="logo-nav"
         /></a>
+
+        <!-- CARRITO -->
+        <!-- <div class="container-icon">
+          <img class="icon-cart" src="/img/meat.svg">  
+          <div class="count-products">
+            <span>0</span>
+          </div>
+          <div class="container-cart-products hidden-cart">
+            <p class="cart-empty">El carrito está vacío</p>
+          </div>
+        </div> -->
+        <!-- FIN CARRITO -->
+
         <button
           class="navbar-toggler"
           type="button"
@@ -48,7 +61,7 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title subtitulo-pc" id="offcanvasNavbarLabel">
+            <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
               Meet Meat
             </h5>
             <button
@@ -61,28 +74,51 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                <a
+                  class="texto-navegacion nav-link"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <hr>
+              <li class="nav-item">
+                <a class="nav-link active texto-navegacion" href="../pages/acercaDeBelicones.html"
+                  >Acerca de Belicones</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Acerca de nosotros</a>
+                <a class="nav-link texto-navegacion" href="../pages/acercaDeNosotros.html"
+                  >Acerca de Meet Meat</a
+                >
+              </li>
+              <hr>
+              <li class="nav-item">
+                <a class="nav-link texto-navegacion" href="../pages/menuoficial.html"
+                  >Steak Garage</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Steack Garage</a>
+                <a class="nav-link texto-navegacion" href="../pages/workshop.html"
+                  >Workshop</a
+                >
               </li>
+              <hr>
               <li class="nav-item">
-                <a class="nav-link" href="#">Workshop</a>
+                <a class="nav-link texto-navegacion" href="../pages/galery.html"
+                  >Blog</a
+                >
               </li>
+              <hr>
               <li class="nav-item">
-                <a class="nav-link" href="#">Vídeos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contactos</a>
+                <a class="nav-link texto-navegacion" href="../pages/contactanos.html"
+                  >Contáctanos</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="nav-low"></div>
     </nav>
 
     <script
