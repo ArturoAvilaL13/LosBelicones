@@ -21,7 +21,7 @@ hr {
   width: 125px;
 }
 
-/* color de link de pagina actuak */
+/* color de link de pagina actual */
 .active{
   color: #E0351B !important;
 }
@@ -47,16 +47,9 @@ hr {
   border-radius: 7px;
 }
 
-.nav-low {
-  height: 2px;
-  width: 100vw;
-  background-color: #eb953f;
-}
-
 .btn-close {
   background-color: #EB953F;
 }
-
 
 /* CARRITO */
 

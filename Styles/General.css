@@ -87,10 +87,24 @@
   /* background-color: var(--color-navbar-footer) !important; */
 }
 
+
+.footer-container{
+  display: flex;
+  align-items: center;
+}
+
+.nav-low, .foot-up {
+  height: 2px;
+  width: 100vw;
+  background-color: #eb953f;
+}
+
 .footer {
+  /* height: 100% !important; */
   width: 100% !important;
   max-height: 130px !important;
-  background-color: blue;
+  background-color: var(--color-navbar-footer);
+  /* background-color: blue; */
 }
 
 /*
