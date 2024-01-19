@@ -31,7 +31,7 @@
   --tamano-footer-pc: 0.8em;
   --color-textos: #fcf1f1;
   --color-fondo: #860606;
-  --color-navbar-footer: #1b0101;
+  --color-navbar-footer: #290106;
 }
 
 .color-fondo {
@@ -79,6 +79,7 @@
 #header {
   background-color: var(--color-navbar-footer);
   height: fit-content;
+  width: 100% !important;
 }
 
 .nav {
@@ -93,18 +94,11 @@
   align-items: center;
 }
 
-.nav-low, .foot-up {
-  height: 2px;
-  width: 100%;
-  background-color: #eb953f;
-}
-
 .footer {
   /* height: 100% !important; */
   width: 100% !important;
   max-height: 130px !important;
   background-color: var(--color-navbar-footer);
-  /* background-color: blue; */
 }
 
 /*
