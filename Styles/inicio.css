@@ -26,17 +26,6 @@ body{
 }
 
 
-
-  #header {
-    width: 100%;
-    background-color: blue;
-  text-align: center;
-  padding: 10px;
-  }
-
-
-
-
 h1 { font-size: var(--tamano-titulos-pc);
     font-family: var(--fuente-titulos-subtitulos);
 
