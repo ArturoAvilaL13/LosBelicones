@@ -9,12 +9,12 @@ nav {
 }
 
 hr {
-  border: 1px solid #EB953F;
+  border: 1px solid #EB953F !important;
 }
 
 /* Color fondo, clase de Bootstrap */
 .offcanvas {
-  background-color: rgba(27, 1, 1, 0.94);
+  background-color: rgba(27, 1, 1, 0.94) !important;
  
 }
 
@@ -41,13 +41,13 @@ hr {
 
 /* para cambiar color de hamburguesa se debe modificar rgba de stroke */
 .navbar{
-  --bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  --bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 } 
 
 
 /* icono hamburguesa, clase de bootstrap */
 .navbar-toggler-icon {
-  width: 50px;
+  width: 50px !important;
 }
 
 /* marco a la hamburguesa */
@@ -59,7 +59,7 @@ hr {
 
 /* quitar el recuadro negro al dar click sobre la hamburguesa */
 .navbar-toggler:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 /* boton cruz cerrar */
@@ -70,8 +70,8 @@ hr {
 
 /* modificar color de X y su borde al presionar */
 .btn-close {
-  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
-  --bs-btn-close-focus-shadow: none;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+  --bs-btn-close-focus-shadow: none !important;
 }
 
 
