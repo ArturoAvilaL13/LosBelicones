@@ -82,9 +82,10 @@ hr {
 /* CARRITO */
 
 /* para que el circulo contador se mantenga sobre la carnita */
-.container-icon{
+.container-cart{
   position: relative;
-  background-color: #eb6434;
+  margin-left: auto; /*lo mueve a la derecha*/
+  margin-right: 20px;
 }
 
 .icon-cart{
