@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=false>
-    <title>Pagina Inicio</title>
+    <title>Meet Meat</title>
+    <link rel="shortcut icon" href="../img/steak-svgrepo-com.svg"/>
     <!-- ~ Link a la fuente de Rubik mono one-->
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular" rel="stylesheet" />
     <!-- ~ Link a la fuente de Rubik-->
@@ -19,22 +20,122 @@
     <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../Styles/inicio.css" />
     <link rel="stylesheet" href="../Styles/General.css" />
+    <link rel="stylesheet" href="./Styles/navbar.css">
 
 </head>
 
 <body>
 
-    <div id="header">header</div>
+    <div id="header">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              src="../img/logo1.png"
+              alt="MeetMeat"
+              target="_parent"
+              class="logo-nav"
+          /></a>
+  
+          <!-- CARRITO -->
+          <!-- <div class="container-icon">
+            <img class="icon-cart" src="/img/meat.svg">  
+            <div class="count-products">
+              <span>0</span>
+            </div>
+            <div class="container-cart-products hidden-cart">
+              <p class="cart-empty">El carrito está vacío</p>
+            </div>
+          </div> -->
+          <!-- FIN CARRITO -->
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                Meet Meat
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active texto-navegacion "
+                    aria-current="page"
+                    href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/acercaDeBelicones.html"
+                    >Acerca de Belicones</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/acercaDeNosotros.html"
+                    >Acerca de Meet Meat</a
+                  >
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/menuoficial.html"
+                    >Steak Garage</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/workshop.html"
+                    >Workshop</a
+                  >
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/galery.html"
+                    >Blog</a
+                  >
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link texto-navegacion" href="../pages/contactanos.html"
+                    >Contáctanos</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-    <div class="parent">
+      <div class="img-fluid parent">
         
-        <div class="div1"> <img class="img-fluid" src="../img/LOGO MEET MEAT SIN FONDO BLANCO-02.png"
+        <div class=" div1"> <img class="img-fluid img" src="../img/LOGO MEET MEAT SIN FONDO BLANCO-02.png"
                 alt="logo meetMeatBlanco" align="rigth" /> </div>
 
 
         <div class="div2">
 
-            <img class="img-fluid" src="../img/DSC_2687.jpg" alt="Brocheta en llamas" height="800" align="left" />
+            <img class="img-fluid rounded-start img" src="../img/DSC_2687.jpg" alt="Brocheta en llamas" height="800" align="left" />
 
         </div>
         <div class="div3">
@@ -47,10 +148,10 @@
                 los secretos de un asado perfecto a través de nuestros emocionantes workshops.
             </p>
         </div>
-        <div class="div4"> <img class="img-fluid" src="/img/imagen_2024-01-06_140606955.png" alt="bowls de especias"
+        <div class="div4"> <img class="img-fluid " src="/img/imagen_2024-01-06_140606955.png" alt="bowls de especias"
                 width="854" height="hug" align="center" /> </div>
-        <div class="div5"> <img class="img-fluid" src="/img/IMG_9910.jpg" alt="Brocheta en llamas" width="949"
-                height="800" align="left" /> </div>
+        <div class="div5"> <img class="img-fluid rounded-start img" src="/img/IMG_9910.jpg" alt="Brocheta en llamas" width="949"
+                 align="left" /> </div>
         <div class="div6">
             <h1>La mejor selección de Steaks de la Ciudad.</h1>
 
@@ -62,8 +163,8 @@
                 desde la comodidad de tu hogar.
             </p>
         </div>
-        <div class="div7"> <img class="img-fluid" src="/img/40b4820c-7d05-42a6-b1b8-bb0f2c034c9f.jpg"
-                alt="Platillo de corte fino con emplatado elegante" height="800" align="right" /> </div>
+        <div class="div7"> <img class="img-fluid rounded-start img" src="/img/40b4820c-7d05-42a6-b1b8-bb0f2c034c9f.jpg"
+                alt="Platillo de corte fino con emplatado elegante"  align="right" /> </div>
         <div class="div8">
             <h1>Transformate en el King de la Parrilla.</h1>
 
@@ -75,7 +176,7 @@
                 adquiridas!
             </p>
         </div>
-        <div class="div10"> <img class="img-fluid" src="/img/DSC00361.jpg" alt="bowls de especias" width="854"
+        <div class="div10"> <img class="img-fluid rounded-start img" src="/img/DSC00361.jpg" alt="bowls de especias" 
                 height="hug" align="center" /> </div>
         <div class="div9">
             <h1 class="Qa">Sabor, calidad y pasión en cada bocado.</h1>
@@ -90,7 +191,7 @@
 
             </p>
         </div>
-    </div>
+      </div>
 
 
 <iframe

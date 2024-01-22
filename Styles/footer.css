@@ -1,8 +1,8 @@
 .container {
   height: 130px;
   width: 100%;
-  background-color: #1b0101;
   overflow: hidden;
+  background-color: #290106;
 }
 
 .arriba {
@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  height: 85px;
   width: 100%;
 }
 
@@ -55,13 +56,9 @@ color: #102fdd;
 }
 
 .abajo {
-  padding: 5px;
-  height: 20px;
+  padding: 10px;
   text-align: center;
 }
-
-/* @media only screen and (max-width: 1024px) {
-} */
 
 @media only screen and (max-width: 517px) {
   .arriba {

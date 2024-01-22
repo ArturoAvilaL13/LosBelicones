@@ -21,10 +21,10 @@
   flex-flow: row wrap;
   padding: 15px 15px;
 }
-#header {
+/* #header {
   background-color: #1b0101;
   height: fit-content;
-}
+} */
 
 #tarjeta {
   position: relative;
