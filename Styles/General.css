@@ -12,17 +12,16 @@
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;
+  height: 15px;
 }
 
 *::-webkit-scrollbar-track {
   background-color: #290106;
-  opacity: 0;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #860606;
   border-radius: 40px;
-  height: 15px;
 }
 :root {
   --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
