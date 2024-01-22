@@ -140,7 +140,7 @@
       </div>
       <div id="content">
         <h1 class="titulo">contáctanos</h1>
-        <div id="camposEntrada">
+        <form id="camposEntrada">
           <h2 class="subtitulo">Escribe tu mensaje</h2>
           <h3 class="texto-navegacion">
             ¿Tienes algo que comentarnos?<br />,¿Quieres cotizar un evento?
@@ -149,37 +149,56 @@
 
           <div class="form-floating mb-3">
             <input
-              type="email"
+              type="text"
               class="form-control borde-modificado texto-navegacion text"
-              id="email"
+              id="nombre"
+              name="nombre"
               placeholder=""
               autocomplete="off"
+              required
             />
-            <label for="email" class="texto-navegacion">Nombre</label>
+            <label for="nombre" class="texto-navegacion">Nombre</label>
           </div>
-
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control borde-modificado texto-navegacion text"
+              id="telefono"
+              name="telefono"
+              placeholder=""
+              autocomplete="off"
+              required
+            />
+            <label for="telefono" class="texto-navegacion">Telefono</label>
+          </div>
           <div class="form-floating mb-3">
             <input
               type="email"
               class="form-control borde-modificado texto-navegacion"
-              id="email"
+              id="correo"
+              name="correo"
               placeholder=""
               autocomplete="off"
+              required
             />
-            <label for="email" class="texto-navegacion">Email</label>
+            <label for="correo" class="texto-navegacion">Email</label>
           </div>
 
           <div class="form-floating">
             <textarea
               class="form-control borde-modificado texto-navegacion textarea-alto"
               placeholder="Leave a comment here"
-              id="comentarios"
+              id="comentario"
+              name="comentario"
+              required
             ></textarea>
-            <label for="comentarios" class="texto-navegacion">Comments</label>
+            <label for="comentario" class="texto-navegacion">Comments</label>
           </div>
 
-          <button type="button" class="btn texto-navegacion">Enviar</button>
-        </div>
+          <button type="submit" class="btn texto-navegacion" id="enviar">
+            Enviar
+          </button>
+        </form>
         <div id="horariosAtencion">
           <div class="horarios">
             <h6 class="subtitulo margin-auto">Horarios de atención</h6>
@@ -240,5 +259,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="../JavaScripts/correo.js"></script>
   </body>
 </html>

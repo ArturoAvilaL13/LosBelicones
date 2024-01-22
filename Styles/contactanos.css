@@ -31,6 +31,17 @@
   width: 80%;
 }
 
+#camposEntrada > button {
+  background-color: #860606;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+#camposEntrada > button:hover {
+  border: solid #eb953f 3px;
+  border-radius: 6px;
+}
+
 .borde-modificado {
   border: none;
   background: #860606;
@@ -47,17 +58,6 @@ label::after {
 textarea:focus,
 input:focus {
   background: #860606 !important;
-}
-
-#camposEntrada > button {
-  background-color: #860606;
-  border-radius: 6px;
-  margin-top: 15px;
-}
-
-#camposEntrada > button:hover {
-  border: solid #eb953f 3px;
-  border-radius: 6px;
 }
 
 .textarea-alto {
