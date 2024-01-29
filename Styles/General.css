@@ -6,22 +6,22 @@
 /* Firefox */
 * {
   scrollbar-width: none;
-  scrollbar-color: #860606 #ffffff;
+  scrollbar-color: #860606;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;
+  height: 15px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #eb953f;
+  background-color: #290106;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #860606;
-  border-radius: 10px;
-  border: 3px groove #1b0101;
+  border-radius: 40px;
 }
 :root {
   --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
@@ -30,8 +30,8 @@
   --tamano-sub-navegacion-pc: 0.938em; /*15px*/
   --tamano-footer-pc: 0.8em;
   --color-textos: #fcf1f1;
-  --color-fondo: #860606;
-  --color-navbar-footer: #1b0101;
+  --color-fondo: #400118;
+  --color-navbar-footer: #290106;
 }
 
 .color-fondo {
@@ -79,24 +79,20 @@
 #header {
   background-color: var(--color-navbar-footer);
   height: fit-content;
+  width: 100% !important;
 }
 
-.nav {
+nav {
   width: 100% !important;
   height: 90px !important;
+  padding: 0px;
+  align-content: center;
   /* background-color: var(--color-navbar-footer) !important; */
 }
 
-
-.footer-container{
+.footer-container {
   display: flex;
   align-items: center;
-}
-
-.nav-low, .foot-up {
-  height: 2px;
-  width: 100%;
-  background-color: #eb953f;
 }
 
 .footer {
@@ -104,7 +100,6 @@
   width: 100% !important;
   max-height: 130px !important;
   background-color: var(--color-navbar-footer);
-  /* background-color: blue; */
 }
 
 /*
@@ -114,3 +109,4 @@
  ~ Link a la fuente de Rubik
  <link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
 */
+

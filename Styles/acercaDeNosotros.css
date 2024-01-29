@@ -1,11 +1,11 @@
 #container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   max-height: fit-content;
 }
 
 #content {
-  width: 100%;
+  /* width: 100%; */
   min-height: 800px;
   max-height: fit-content;
   padding: 20px;
