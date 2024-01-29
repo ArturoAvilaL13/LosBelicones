@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión</title>
-    <link rel="shortcut icon" href="../img/steak-svgrepo-com.svg"/>
+    <link rel="shortcut icon" href="../img/steak-svgrepo-com.svg" />
     <link
       href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular"
       rel="stylesheet"
@@ -21,7 +21,7 @@
     />
 
     <link rel="stylesheet" href="../Styles/General.css" />
-    <link rel="stylesheet" href="../Styles/navbar.css">
+    <link rel="stylesheet" href="../Styles/navbar.css" />
 
     <!-- <script src="../JavaScripts/navs/login-registro.js" async></script> -->
     <link rel="stylesheet" href="../Styles/login-registro.css" />
@@ -38,7 +38,7 @@
                 target="_parent"
                 class="logo-nav"
             /></a>
-    
+
             <!-- CARRITO -->
             <!-- <div class="container-icon">
               <img class="icon-cart" src="/img/meat.svg">  
@@ -50,7 +50,7 @@
               </div>
             </div> -->
             <!-- FIN CARRITO -->
-    
+
             <button
               class="navbar-toggler"
               type="button"
@@ -82,43 +82,55 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
                     <a
-                      class="nav-link texto-navegacion "
+                      class="nav-link texto-navegacion"
                       aria-current="page"
                       href="../index.html"
                       >Inicio</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/acercaDeBelicones.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/acercaDeBelicones.html"
                       >Acerca de Belicones</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/acercaDeNosotros.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/acercaDeNosotros.html"
                       >Acerca de Meet Meat</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/menuoficial.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/menuoficial.html"
                       >Steak Garage</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/workshop.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/workshop.html"
                       >Workshop</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/galery.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/galery.html"
                       >Blog</a
                     >
                   </li>
-                  <hr>
+                  <hr />
                   <li class="nav-item">
-                    <a class="nav-link texto-navegacion" href="../pages/contactanos.html"
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/contactanos.html"
                       >Contáctanos</a
                     >
                   </li>
@@ -135,81 +147,117 @@
           alt="logo meetMeatBlanco
         "
         />
-        <div id="login" style="display: flex" class="imagenFondo">
+        <form id="login" style="display: none" class="imagenFondo">
+          <div class="form-floating">
+            <input type="email" class="form-control texto-navegacion
+            borde-modificado" id="correoLogin"
+            name="correo"//placeholder="name@example.com" required />
+            <label for="correoLogin" class="texto-navegacion">Correo</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control texto-navegacion
+            borde-modificado" id="contrasenaLogin" name="contraseña"
+            //placeholder="Password" required />
+            <label for="contrasenaLogin" class="texto-navegacion"
+              >Contraseña</label
+            >
+          </div>
+
+          <button class="btn texto-navegacion" type="submit">
+            Iniciar sesion
+          </button>
+          <p class="btn texto-navegacion button-sin-fondo" id="textoRegistro">
+            ¿No tienes cuenta?, ¡Registrate aqui!
+          </p>
+        </form>
+        <form id="registro" style="display: flex">
           <div class="form-floating">
             <input
               type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              class="form-control texto-navegacion borde-modificado"
+              id="correoRegistro"
+              name="correo"
+              required
             />
-            <label for="floatingInput">Correo</label>
+            <label for="correoRegistro" class="texto-navegacion">Correo</label>
           </div>
           <div class="form-floating">
             <input
               type="password"
-              class="form-control"
-              id="floatingPassword"
-              placeholder="Password"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasenaRegistro"
+              name="contraseña"
+              required
             />
-            <label for="floatingPassword">Contraseña</label>
-          </div>
-          <p class="texto-navegacion" id="textoRegistro">
-            ¿No tienes cuenta?, Registrate :D
-          </p>
-          <button class="btn">Iniciar sesion</button>
-        </div>
-        <div id="registro" style="display: none">
-          <p class="texto-navegacion" id="textoLogin">
-            ¿Ya tienes cuenta?, Inicia sesion
-          </p>
-          <div class="form-floating">
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Correo</label>
+            <label for="contrasenaRegistro" class="texto-navegacion"
+              >Contraseña</label
+            >
           </div>
           <div class="form-floating">
             <input
               type="password"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasenaRegistroValidacion"
+              name="validar contraseña"
+              required
             />
-            <label for="floatingInput">Contraseña</label>
+            <label for="contrasenaRegistroValidacion" class="texto-navegacion"
+              >Escribe nuevamente la contraseña</label
+            >
           </div>
           <div class="form-floating">
             <input
               type="text"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              class="form-control texto-navegacion borde-modificado"
+              id="nombreRegistro"
+              name="nombre"
+              required
             />
-            <label for="floatingInput">Nombre</label>
+            <label for="nombreRegistro" class="texto-navegacion">Nombre</label>
           </div>
           <div class="form-floating">
             <input
               type="text"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              class="form-control texto-navegacion borde-modificado"
+              id="apellidosRegistro"
+              name="apellidos"
+              required
             />
-            <label for="floatingInput">Apellidos</label>
+            <label for="apellidosRegistro" class="texto-navegacion"
+              >Apellidos</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="number"
+              class="form-control texto-navegacion borde-modificado"
+              id="telefonoRegistro"
+              name="telefono"
+              required
+            />
+            <label for="telefonoRegistro" class="texto-navegacion"
+              >Telefono</label
+            >
           </div>
           <div class="form-floating">
             <input
               type="text"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              class="form-control texto-navegacion borde-modificado"
+              id="direccionRegistro"
+              name="direccion"
+              required
             />
-            <label for="floatingInput">Direccion</label>
+            <label for="direccionRegistro" class="texto-navegacion"
+              >Direccion</label
+            >
           </div>
-          <button class="btn">Crear usuario</button>
-        </div>
+          <button class="btn texto-navegacion" type="submit">
+            Crear usuario
+          </button>
+          <p class="btn texto-navegacion button-sin-fondo" id="textoLogin">
+            ¿Ya tienes cuenta?, ¡Inicia sesion aqui!
+          </p>
+        </form>
       </div>
 
       <div class="footer-container">
@@ -219,14 +267,13 @@
           class="footer"
         ></iframe>
       </div>
-      
-
     </div>
-    
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="../JavaScripts/login-registro.js"></script>
   </body>
 </html>
