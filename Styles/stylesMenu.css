@@ -239,4 +239,24 @@ body {
     
 }
 
+
+#lista-de-productos {
+    display: flex
+  }
+  
+  .carnitas {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carnitas img {
+    width: 20%;
+    height: 10% !important;    
+  }
+
   
