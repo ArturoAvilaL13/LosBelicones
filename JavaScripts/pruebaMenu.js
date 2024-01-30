@@ -213,3 +213,6 @@ function hacerVisibleCarrito(){
     var items = document.getElementsByClassName('contenedor-items')[0];
     items.style.width = '60';
 }
+
+
+
