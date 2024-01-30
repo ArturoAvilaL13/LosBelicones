@@ -155,4 +155,54 @@ body {
     font-size: 16px;
 }
 
+/* Estilos adicionales */
+
+
+#calendario {
+    max-width: 900px;
+    margin: 0 auto;
+    color:#ffffff;
+
+}
+
+#evento-info {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 5px solid #860606;
+    border-radius: 5%;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+#evento-info img {
+    max-width: 50%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: 50%; /* Hace que la altura de la imagen se ajuste proporcionalmente al ancho */
+    align-content: center;
+}
+
+.ncalen{
+    font-family: 'Rubik Mono One', monospace;
+    text-align: center;
+    font-weight: 400;
+    size: 148px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* Agrega estilos para los botones del calendario */
+.fc-button {
+    background-color:#860606; /* Color por defecto */
+    color:#ffffff;
+    
+}
+
+/* Cambia el color al hacer hover sobre los botones del calendario */
+.fc-button:hover {
+    background-color: #860606;
+    color:#ffffff
+    
+}
+
 
