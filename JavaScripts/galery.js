@@ -90,3 +90,33 @@ document.addEventListener('DOMContentLoaded', function () {
         videoCounter.textContent = `${currentIndex + 1} / ${videos.length}`;
     }
 });
+
+$(document).ready(function() {
+    // Inicializar el calendario
+    $('#calendario').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        events: [
+            {
+                title: 'Feria de Carne',
+                start: '2024-02-02T10:00:00', // Agrega la hora de inicio
+                end: '2024-02-02T12:00:00',   // Agrega la hora de finalización
+                description: '<h2>Feria de Carne</h2><p>Conoce todos nuestros cortes de carne</p><p>Hora de inicio: 10:00 AM</p><p>Hora de finalización: 12:00 PM</p><img src="../img/6picania.jpg" alt="Evento 1">'
+            },
+            {
+                title: 'Evento 2',
+                start: '2024-01-10T14:30:00',
+                end: '2024-01-10T16:30:00',
+                description: '<h2>Evento 2</h2><p>Información detallada del Evento 2</p><p>Hora de inicio: 2:30 PM</p><p>Hora de finalización: 4:30 PM</p><img src="imagen_evento2.jpg" alt="Evento 2">'
+            },
+            // Agrega más eventos según sea necesario
+        ],
+        eventClick: function(calEvent, jsEvent, view) {
+            // Mostrar información del evento en la misma página
+            $('#evento-info').html(calEvent.description).show();
+        }
+    });
+});

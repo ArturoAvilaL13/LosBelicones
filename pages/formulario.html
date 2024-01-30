@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <script defer src="../JavaScripts/formulario.js"></script>
+    <link rel="stylesheet" href="../Styles/formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;600&family=Poppins&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;600&family=Poppins&family=Rubik+Mono+One&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/General.css">
+</head>
+<body>
+    <h1>Listado de Productos/Publicaciones</h1>
+    
+    <!-- Formulario para agregar productos con imagen -->
+    <form id="formularioModelo">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="categoria">Categoría</label>
+            <select class="form-control" id="categoria" name="categoria" required>
+                <option value="Tipo Carne 1">Tipo Carne 1</option>
+                <option value="Tipo Carne 2">Tipo Carne 2</option>
+                <option value="Tipo Carne 3">Tipo Carne 3</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="imagen">Imagen</label>
+            <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="validarFormulario()">Crear Modelo</button>
+    </form>
+    <div id="mensajeAlerta"></div>
+    <div id="output"></div>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
+</body>
+</html>
