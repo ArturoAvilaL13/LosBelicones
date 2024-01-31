@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar Sesión</title>
+    <title>Steak Garage</title>
     <link rel="shortcut icon" href="../img/steak-svgrepo-com.svg" />
+    <link rel="stylesheet" href="../Styles/General.css" />
+    <link rel="stylesheet" href="../Styles/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular"
       rel="stylesheet"
@@ -14,22 +16,29 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.25.0/font/bootstrap-icons.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="../Styles/General.css" />
-    <link rel="stylesheet" href="../Styles/navbar.css" />
-
-    <!-- <script src="../JavaScripts/navs/login-registro.js" async></script> -->
-    <link rel="stylesheet" href="../Styles/login-registro.css" />
+    <script src="../JavaScripts/MenuJS.js" async></script>
+    <link rel="stylesheet" href="../Styles/stylesMenu.css" />
   </head>
   <body>
     <div id="container">
       <div id="header">
-        <nav class="navbar">
+        <nav class="navbar fixed-top">
           <div class="container-fluid">
             <a class="navbar-brand" href="../index.html"
               ><img
@@ -40,15 +49,15 @@
             /></a>
 
             <!-- CARRITO -->
-            <!-- <div class="container-icon">
-              <img class="icon-cart" src="/img/meat.svg">  
+            <div class="container-cart">
+              <img class="icon-cart" src="/img/meat.svg" />
               <div class="count-products">
                 <span>0</span>
               </div>
               <div class="container-cart-products hidden-cart">
                 <p class="cart-empty">El carrito está vacío</p>
               </div>
-            </div> -->
+            </div>
             <!-- FIN CARRITO -->
 
             <button
@@ -106,7 +115,7 @@
                   <hr />
                   <li class="nav-item">
                     <a
-                      class="nav-link texto-navegacion"
+                      class="nav-link active texto-navegacion"
                       href="../pages/menuoficial.html"
                       >Steak Garage</a
                     >
@@ -141,123 +150,69 @@
         </nav>
       </div>
       <div id="content">
-        <img
-          class="img-fluid"
-          src="../img/LOGO MEET MEAT SIN FONDO BLANCO-02.png"
-          alt="logo meetMeatBlanco
-        "
-        />
-        <form id="login" style="display: none" class="imagenFondo">
-          <div class="form-floating">
-            <input type="email" class="form-control texto-navegacion
-            borde-modificado" id="correoLogin"
-            name="correo"//placeholder="name@example.com" required />
-            <label for="correoLogin" class="texto-navegacion">Correo</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control texto-navegacion
-            borde-modificado" id="contrasenaLogin" name="contraseña"
-            //placeholder="Password" required />
-            <label for="contrasenaLogin" class="texto-navegacion"
-              >Contraseña</label
-            >
+        <header>
+          <h1>Meat's Garage</h1>
+        </header>
+        <section class="contenedor">
+          <!--contenedor de los elementos-->
+          
+          <div id="lista-de-productos" class="contenedor-items">
+           
+
           </div>
 
-          <button class="btn texto-navegacion" type="submit">
-            Iniciar sesion
-          </button>
-          <p class="btn texto-navegacion button-sin-fondo" id="textoRegistro">
-            ¿No tienes cuenta?, ¡Registrate aqui!
-          </p>
-        </form>
-        <form id="registro" style="display: flex">
-          <div class="form-floating">
-            <input
-              type="email"
-              class="form-control texto-navegacion borde-modificado"
-              id="correoRegistro"
-              name="correo"
-              required
-            />
-            <label for="correoRegistro" class="texto-navegacion">Correo</label>
+          <!--carrito de compras-->
+          <div class="carrito">
+            <div class="header-carrito">
+              <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+              <!--
+                    <div class="carrito-item">
+                        <img src="../img/cortes cocinados/5filetemignon.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Filete Mignon</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$15.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
+    
+                    <div class="carrito-item">
+                        <img src="../img/cortes cocinados/2Newyorkcocinado.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">New York</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="2" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$15.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        -->
+            </div>
+
+            <div class="carrito-total">
+              <div class="fila">
+                <strong>Tu Total</strong>
+                <span class="carrito-precio-total"> $120.000,00 </span>
+              </div>
+              <button class="btn-pagar">
+                Pagar <i class="fa-solid fa-bag-shopping"></i>
+              </button>
+            </div>
           </div>
-          <div class="form-floating">
-            <input
-              type="password"
-              class="form-control texto-navegacion borde-modificado"
-              id="contrasenaRegistro"
-              name="contraseña"
-              required
-            />
-            <label for="contrasenaRegistro" class="texto-navegacion"
-              >Contraseña</label
-            >
-          </div>
-          <div class="form-floating">
-            <input
-              type="password"
-              class="form-control texto-navegacion borde-modificado"
-              id="contrasenaRegistroValidacion"
-              name="validar contraseña"
-              required
-            />
-            <label for="contrasenaRegistroValidacion" class="texto-navegacion"
-              >Escribe nuevamente la contraseña</label
-            >
-          </div>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control texto-navegacion borde-modificado"
-              id="nombreRegistro"
-              name="nombre"
-              required
-            />
-            <label for="nombreRegistro" class="texto-navegacion">Nombre</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control texto-navegacion borde-modificado"
-              id="apellidosRegistro"
-              name="apellidos"
-              required
-            />
-            <label for="apellidosRegistro" class="texto-navegacion"
-              >Apellidos</label
-            >
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control texto-navegacion borde-modificado"
-              id="telefonoRegistro"
-              name="telefono"
-              required
-            />
-            <label for="telefonoRegistro" class="texto-navegacion"
-              >Telefono</label
-            >
-          </div>
-          <div class="form-floating">
-            <input
-              type="text"
-              class="form-control texto-navegacion borde-modificado"
-              id="direccionRegistro"
-              name="direccion"
-              required
-            />
-            <label for="direccionRegistro" class="texto-navegacion"
-              >Direccion</label
-            >
-          </div>
-          <button class="btn texto-navegacion" type="submit">
-            Crear usuario
-          </button>
-          <p class="btn texto-navegacion button-sin-fondo" id="textoLogin">
-            ¿Ya tienes cuenta?, ¡Inicia sesion aqui!
-          </p>
-        </form>
+        </section>
       </div>
 
       <div class="footer-container">
@@ -268,13 +223,13 @@
         ></iframe>
       </div>
     </div>
-
-    <script src="../JavaScripts/login-registro.js"></script>    
+<script src="../JavaScripts/productos.js">
+    
+</script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../JavaScripts/login-registro.js"></script>
   </body>
 </html>

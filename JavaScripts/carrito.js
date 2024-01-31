@@ -1,4 +1,4 @@
-const btnCart = document.querySelector('.container-cart-icon');
+const btnCart = document.querySelector('.container-cart');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
 );

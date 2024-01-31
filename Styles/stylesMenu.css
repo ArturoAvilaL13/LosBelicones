@@ -1,271 +1,265 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-rbs5eZt1SnmK9wUp7m7s7I2HyRTmk3PmrFqkpb9bxj6ZlHNECvmBdS2Q8tM2r8l6" crossorigin="anonymous">
+/*Importo las fuentes*/
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.25.0/font/bootstrap-icons.css">
-
-body,html {
-    width: 100%;
-    height: 100%;
-    background-color: #860606;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik'
 
 }
 
-#container {
-    width: 100%;
-    height: 100%;
-    background-color: #860606;
-}
-
-#content {
-    padding: 40px;
-    min-height: 900px;
-    max-height: fit-content;
-    background: url(../img/carrusel/DSC_2579.jpg), #860606;
-    background-position: center;
+header{
+    background: url(../img/carrusel/DSC00628.jpg);
     background-size: cover;
-    background-blend-mode: multiply;
+    background-position: center;
+    height: 300px;
+}
+
+header h1{ /*titulo*/
+    font-family: 'Rubik Mono One';
+    font-size: xxx-large;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 60px;
+    color: #fdf6f6;
+    padding: 30px 0;
+}
+
+body {
+    background-color: #470101; /* Cambia el color de fondo a tu preferencia */
+    background-image: url('ruta-de-tu-imagen.jpg'); /* Agrega la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+
+
+.contenedor { /*lo que contiene los productos*/
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-
+    justify-content: space-between;
+    /* oculto lo que queda fuera del contenedor*/
+    contain: paint;
 }
 
-.btn-add-to-cart {
+.contenedor .contenedor-items{
     margin-top: 30px;
-    background-color: #850e14;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 20px;
-   
-}
-
-.btn-add-to-cart:hover {
-    background-color: #fdfdfd; 
-    color: rgb(65, 8, 8); 
-}
-
-
-i {
-    color: rgb(248, 243, 243);
-}
-
-
-.section-heading {
-    text-align: center; 
-    font-size: 3rem; 
-    margin-bottom: 1px;
-    font-family: 'Rubik Mono One', monospace;
-
-}
-
-.sub-section {
-    text-align: center; 
-    font-size: 2.2rem; 
-    margin-bottom: 30px;
-    font-family: 'Rubik Mono One', monospace;
-}
-
-.sub-section2 {
-    text-align: center; 
-    font-size: 2.2rem; 
-    margin-top: 1px;
-    margin-bottom: 30px;
-    font-family: 'Rubik Mono One', monospace;
-    grid-gap: 15px;
-}
-
-.section-3 {
-    padding: 3rem 0 5rem;
-    color: #fff; 
-    font-family: 'Rubik Mono One', monospace;
-    margin-top: 0;
-}
-
-#gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px; /* Menos espacio entre las imágenes */
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.gallery-link {
-position: relative;
-margin: 2rem .5rem;
-margin-bottom: 60px;
-}
-
-.gallery-link::before {
-    content:"";
-    position: absolute;
-    top: 2vw;
-    left: 60%;
-    width: .1rem;
-    height: 0;
-    background-color: #fff;
-    z-index: 10;
-    transition: height .5s;
-}
-
-.gallery-link:hover::before {
-    height: 60%;
-}
-
-
-
-.gallery-link::after {
-    content:"";
-    position: absolute;
-    top: 18%;
-    left: 7rem;
-    width: 0;
-    height: .1rem;
-    background-color: #fff;
-    transition: width .5s;
-}
-
-.gallery-link:hover::after {
-    width: 40%;
-}
-
-.food-img {
-    width: 250px; 
-    height: 250px; 
-    object-fit: cover;
-    margin-left: 100px; 
-    box-shadow: .3rem .3rem .1rem #1b0101, .5rem .5rem .1rem #1b0101, .7rem .7rem .1rem #1b0101, .9rem .9rem .9rem .1rem #1b0101;
-    transition: all 0.5s;
-}
-
-.gallery-link:hover .food-img {
-    box-shadow: 2rem 2rem .1rem #1b0101;
-    filter: blur(.1rem);
-    opacity: .5;
-    transform: scale(1.1);
-}
-
-.food-name {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #fff;
-    width: 0;
-    overflow: hidden;
-    transition: width .3s;
-}
-
-.gallery-link:hover .food-name {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
     width: 100%;
-    transition: width 1.5s 0.5s;
+    transition: .3s;
 
 }
 
-.food-description {
-    position: absolute;
-    top: 5vw;
-    left: 2rem;
-    font-size: .8vw;
-    color: #fff;
-    max-width: 50%; 
-    align-content: center;
-    width: 70%;
-    font-weight: 300;
-    letter-spacing: .1rem;
+
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #470101;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+    background-color: #250202;
+
+}
+
+.contenedor-items .item:hover{
+    box-shadow: 0 0 10px #580404;
+    scale: 1.05;
+    
+}
+
+.contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor-items .item .titulo-item{
+    display:block;
+    font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+.contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #fff;
+
+}
+.contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background:#860606;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*seccion carrito*/
+.carrito{
+    border: 1px solid #860606;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s;
+    margin-right: -100%;
+    background-color: aliceblue;
 }
 
-.gallery-link:hover .food-description {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s 1s;
-
+.carrito .header-carrito{
+    background-color: #860606;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
 
 }
-
-.carousel-item img {
-
-    width: 100%; 
-    height: 300px; 
-    object-fit: cover;
-    margin-top: 80px;
-    margin-bottom: 80px; 
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #860606;
+    padding: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
 }
 
-.carousel-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
 }
 
-.carousel-container {
-    max-width: 600px;
-    margin: 0 auto;
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    top: auto;
-    bottom: 50%; /* Ajusta según sea necesario */
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-#gallery .food-img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    margin-left: 20px; /* Ajusta según sea necesario */
-    box-shadow: .3rem .3rem .1rem #1b0101, .5rem .5rem .1rem #1b0101, .7rem .7rem .1rem #1b0101, .9rem .9rem .9rem .1rem #1b0101;
-    transition: all 0.5s;
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #580404;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+
+}
+.carrito-total{
+    background-color: #580404;
+    padding: 30px;
+}
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-    #gallery .food-img {
-        margin-left: 0;
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: #860606;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+
+}
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+
+/*seccion responsiva*/ 
+
+@media screen and (max-width:1024px) {
+    .contenedor{
+        display: block;
     }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+    
 }
 
-@media only screen and (min-width: 430px) and (max-width: 1024px) {
-    .carousel-container {
-        max-width: 80%; 
-    }
-}
 
-@media only screen and (max-width: 430px) {
-    .carousel-container {
-        max-width: 90%; 
-    }
-}
 
-/*@media only screen and (max-width: 1024px) {
-    #perritos {
-      flex-wrap: wrap;
-      padding: 30px 0;
-      justify-content: space-around;
-      gap: 30px 0;
-    }
-    #tarjeta {
-      margin: 0;
-    }
+  
+  .carnitas {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  /@media only screen and (max-width: 430px) {
-    #perritos {
-      flex-wrap: nowrap;
-      flex-direction: column;
-    }
-    #tarjeta {
-      width: 350px;
-    }
+  .carnitas img {
+    width: 20%;
+    height: 10% !important;    
   }
+
   

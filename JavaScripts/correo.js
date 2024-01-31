@@ -8,7 +8,7 @@ const formulario = document.getElementById("camposEntrada");
 const numerosREGEX = /\d/;
 const contieneEspaciosREGEX = /\s/;
 const emailREGEX = /^[\w.+\-]+@{1}\w+\.{1}com$/;
-const vacioREGEX = /^[^.]+$/;
+// const vacioREGEX = /^[^.]+$/;
 
 let mensaje = "";
 
