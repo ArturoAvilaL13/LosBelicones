@@ -34,6 +34,8 @@ body {
     font-family: 'Open Sans';
 }
 
+
+
 .contenedor { /*lo que contiene los productos*/
     max-width: 1200px;
     padding: 10px;
@@ -55,15 +57,16 @@ body {
 
 }
 
+
 .contenedor .contenedor-items .item{
     max-width: 200px;
     padding: 10px;
     margin: auto;
-    border: 1px solid #faf3f3;
+    border: 1px solid #470101;
     border-radius: 10px;
     padding: 20px;
     transition: .3s;
-    background-color: #f0e6e6;
+    background-color: #250202;
 
 }
 
@@ -81,12 +84,14 @@ body {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 }
 .contenedor-items .item .precio-item{
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
+    color: #fff;
 
 }
 .contenedor-items .item .boton-item{
@@ -240,9 +245,7 @@ body {
 }
 
 
-#lista-de-productos {
-    display: flex
-  }
+
   
   .carnitas {
     width: 200px;
