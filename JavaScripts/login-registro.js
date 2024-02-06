@@ -23,6 +23,11 @@ const apellidosRegistro = document.getElementById("apellidosRegistro");
 const telefonoRegistro = document.getElementById("telefonoRegistro");
 const direccionRegistro = document.getElementById("direccionRegistro");
 
+//*Variables para axios
+const baseURL = "http://localhost:8080/api/v1/";
+const postUsuarioURL = `${baseURL}usuario`;
+const getUsuarioURL = `${baseURL}usuario/checar/`;
+
 //* REGEX para validar el formulario
 let mensaje = "";
 const emailREGEX = /^[\w.+\-]+@{1}[\w.+\-]+\.{1}com$/; //correo
@@ -114,17 +119,6 @@ contrasenaLogin.addEventListener("invalid", (e) => {
 contrasenaLogin.addEventListener("input", (e) => {
   validarVacio(e.target);
 });
-//~Agregando funcionalidad el form de login para cuando se conceda acceso
-formLogin.onsubmit = (e) => {
-  e.preventDefault();
-  const contrasenaLoginValidada = contrasenaLogin.value;
-  const correoLoginValidado = correoLogin.value;
-
-  //~Aqui ira la solicitud a la api para verificar si el usuario existe en la base de datos
-  //!Falta hacer esta parte (de momento solo se desplegaran los valores en consola)
-  console.log(`correo: ${correoLoginValidado}
-  contraseña: ${contrasenaLoginValidada}`);
-};
 
 //~Agregando lilsteners para campos de registro y validarlos
 //&correo
@@ -199,13 +193,60 @@ formRegistro.onsubmit = (e) => {
     apellidos: apellidosRegistro.value,
     telefono: telefonoRegistro.value,
     direccion: direccionRegistro.value,
+    idTipoDeUsuario: 2,
   };
-  console.log(typeof datosValildados);
-  console.log(datosValildados);
+  // console.log(typeof datosValildados);
+  // console.log(datosValildados);
   const datosValildadosJSON = JSON.stringify(datosValildados); //object(javascript)->JSON
-  console.log(typeof datosValildadosJSON);
-  console.log(datosValildadosJSON);
-  const datosObjectJavaScript = JSON.parse(datosValildadosJSON); //JSON -> object
+  // console.log(typeof datosValildadosJSON);
+  // console.log(datosValildadosJSON);
+  // const datosObjectJavaScript = JSON.parse(datosValildadosJSON); //JSON -> object
 
-  //~Una vez transformados a JSON hay que enviarlos a la api
+  //~Una vez transformados a JSON hay que enviarlos a la api en la parte de registro
+  postUsuario(datosValildados);
 };
+
+async function postUsuario(usuario) {
+  try {
+    const response = await axios.post(postUsuarioURL, usuario);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+//~Agregando funcionalidad el form de login para cuando se conceda acceso
+formLogin.onsubmit = (e) => {
+  e.preventDefault();
+  let usuario = {};
+  let mensaje = "";
+  const contrasenaLoginValidada = contrasenaLogin.value;
+  const correoLoginValidado = correoLogin.value;
+
+  //~Aqui ira la solicitud a la api para verificar si el usuario existe en la base de datos
+
+  try {
+    const response = getUsuarioLogin(
+      correoLoginValidado,
+      contrasenaLoginValidada
+    );
+    response
+      .then((data) => data.data)
+      .then((data) => {
+        usuario = data.object;
+        mensaje = data.mensaje;
+        localStorage.setItem("User", usuario);
+        location.href = "../index.html";
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+async function getUsuarioLogin(correo, contra) {
+  try {
+    const response = await axios.get(getUsuarioURL + correo + "/" + contra);
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
