@@ -42,7 +42,8 @@
   background-color: var(--color-fondo-secundario);
 }
 
-.titulo {
+.titulo,
+.select-categorias {
   font-size: var(--tamano-titulos-pc) !important;
 }
 
@@ -56,7 +57,7 @@
 }
 
 .titulo,
-.subtitulo {
+.subtitulo{
   font-family: var(--fuente-titulos-subtitulos) !important;
   color: var(--color-textos) !important;
 }
@@ -100,6 +101,17 @@ nav {
   width: 100% !important;
   max-height: 130px !important;
   background-color: var(--color-navbar-footer);
+}
+
+#titulo-mg{
+  align-items: center;
+}
+
+.carrito-total,
+.carrito-precio-total{
+  font-family: var(--fuente-texto);
+  color: var(--color-textos);
+  font-size: var(--tamano-titulos-pc);
 }
 
 /*
