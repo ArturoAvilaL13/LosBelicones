@@ -57,7 +57,7 @@
 }
 
 .titulo,
-.subtitulo{
+.subtitulo {
   font-family: var(--fuente-titulos-subtitulos) !important;
   color: var(--color-textos) !important;
 }
@@ -83,6 +83,13 @@
   width: 100% !important;
 }
 
+.navbar-header {
+  background-color: var(--color-navbar-footer);
+  height: fit-content;
+  width: 100% !important;
+  height: 58px !important;
+}
+
 nav {
   width: 100% !important;
   height: 90px !important;
@@ -103,12 +110,12 @@ nav {
   background-color: var(--color-navbar-footer);
 }
 
-#titulo-mg{
+#titulo-mg {
   align-items: center;
 }
 
 .carrito-total,
-.carrito-precio-total{
+.carrito-precio-total {
   font-family: var(--fuente-texto);
   color: var(--color-textos);
   font-size: var(--tamano-titulos-pc);
@@ -121,4 +128,3 @@ nav {
  ~ Link a la fuente de Rubik
  <link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
 */
-

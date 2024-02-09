@@ -5,17 +5,16 @@
 
 nav {
   align-content: center;
-  background-color: #1B0101;
+  background-color: #1b0101;
 }
 
 hr {
-  border: 1px solid #EB953F !important;
+  border: 1px solid #eb953f !important;
 }
 
 /* Color fondo, clase de Bootstrap */
 .offcanvas {
   background-color: rgba(27, 1, 1, 0.94) !important;
- 
 }
 
 /* tamanho del logo img */
@@ -24,8 +23,8 @@ hr {
 }
 
 /* color de link de pagina actual */
-.active{
-  color: #E0351B !important;
+.active {
+  color: #e0351b !important;
 }
 
 /* Mantiene el color de link sobre la pagina actual */
@@ -35,15 +34,13 @@ hr {
 
 /* cambia el color de link donde pase el cursor */
 .nav-link:hover {
-  color: #EB953F !important;
+  color: #eb953f !important;
 }
 
-
 /* para cambiar color de hamburguesa se debe modificar rgba de stroke */
-.navbar{
-  --bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-} 
-
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
 
 /* icono hamburguesa, clase de bootstrap */
 .navbar-toggler-icon {
@@ -67,45 +64,39 @@ hr {
   background-color: #EB953F;
 } */
 
-
 /* modificar color de X y su borde al presionar */
 .btn-close {
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='rgba(235, 100, 52, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
   --bs-btn-close-focus-shadow: none !important;
 }
 
-
-
-
-
-
 /* CARRITO */
 
 /* para que el circulo contador se mantenga sobre la carnita */
-.container-cart{
+.container-cart {
   position: relative;
   margin-left: auto; /*lo mueve a la derecha*/
   margin-right: 20px;
 }
 
-.icon-cart{
+.icon-cart {
   width: 70px;
   height: 65px;
   stroke: #ffff;
 }
 
-.icon-cart:hover{
+.icon-cart:hover {
   cursor: pointer;
 }
 
 /* circulo para contar productos */
-.count-products{
+.count-products {
   position: absolute;
   top: 55%;
   right: 0;
 
   background-color: #000000;
-  color: #ffffff; 
+  color: #ffffff;
   width: 25px;
   height: 25px;
 
@@ -115,25 +106,25 @@ hr {
   border-radius: 50%;
 }
 
-.container-cart-products{
+.container-cart-products {
   position: absolute;
-  top: 60px;
   right: 0;
-  background-color: #1b0101;
+  background: none;
   width: 400px;
+  max-height: fit-content;
+  overflow: hidden;
   /* z-index: 1; */
-  box-shadow: 0 10px 20px #000000;;
-  border-radius: 10px;
-  
+  /* box-shadow: 0 10px 20px #000000; */
+  border: none;
 }
 
-.hidden-cart{
+.hidden-cart {
   display: none;
 }
 
-.cart-empty{
+.cart-empty {
   padding: 20px;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 }
 /* FIN CARRITO */
