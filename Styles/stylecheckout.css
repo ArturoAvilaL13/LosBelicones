@@ -1,24 +1,14 @@
 :root {
-    --color-textos: #ffff;
-    --color-fondo: #400118;
-    --color-fonndoSec: #EB953F;
-    --color-fondoTerc: #EB6434;
-    --Color-fondoCuar: #E0351B;
-    --Color-fondoAlter: #D9D9D9;
-    --fuente-titulos-subtitulos: "Rubik Mono One", monospace;
-    --fuente-texto: "Rubik", sans-serif;
+  --color-fondo: #400118;
+  --color-fonndoSec: #eb953f;
+  --color-fondoTerc: #eb6434;
+  --Color-fondoCuar: #e0351b;
+  --Color-fondoAlter: #d9d9d9;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-.principal{
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/fondocarbon.jpg');
-    background-size:cover;
-    background-repeat: no-repeat; 
-}
-
+/*
 .atras{
     border-radius: 20px;
     padding: 10px;
@@ -34,24 +24,23 @@ body{
 
 
 .checkoutLayout{
-
-    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fondo);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 5%;
     padding: 5%;
     width: 100%;
     height: 100%;
 }
-.checkoutLayout .right{
+
+.right{
     background-image: url('../img/fondocarbon.jpg');
     background-size: cover;
-    border-radius: 20px;
-    padding: 40px;
-    color: #fff;
-    box-shadow: 15px 15px 20px rgb(0, 0, 0);
+    padding: auto;
+
 }
-.checkoutLayout .right .form{
+.right .form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -103,4 +92,78 @@ body{
     padding: 20px;
     font-family: var(--fuente-texto);
     color: var(--color-textos);
+}
+*/
+.checkoutLayout {
+  background-image: url("../img/fondocarbon.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 600px;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.right {
+  background-color: rgb(205, 52, 164);
+  box-shadow: 15px 15px 20px rgb(0, 0, 0);
+  border-radius: 20px;
+  width: 98%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.returnCart-titulo {
+  background-color: #b52c5e;
+  text-align: center;
+  padding: 0;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  background: rgb(240, 194, 194) !important;
+}
+
+.product-image {
+  background-color: #400118;
+}
+
+#checkoutForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: aqua;
+  padding: 15px;
+}
+.inputCheckoutForm {
+  background-color: aquamarine;
+  width: 90%;
+}
+.inputCheckoutForm > input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 6px solid pink;
+}
+
+.returnCart-return {
+  background-color: #400118;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
