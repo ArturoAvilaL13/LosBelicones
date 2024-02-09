@@ -12,7 +12,7 @@ html {
 
 #content {
   padding: 40px;
-  min-height: 700px;
+  min-height: 900px;
   max-height: fit-content;
   background: url(../img/DSC00361.jpg), #860606;
   background-blend-mode: multiply;

@@ -1,213 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=false>
-    <title>Meet Meat</title>
-    <link rel="shortcut icon" href="../img/steak-svgrepo-com.svg"/>
-    <!-- ~ Link a la fuente de Rubik mono one-->
-    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular" rel="stylesheet" />
-    <!-- ~ Link a la fuente de Rubik-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="shortcut icon" href="./img/steak-svgrepo-com.svg" />
     <link
-        href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
-        rel="stylesheet" />
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../Styles/inicio.css" />
-    <link rel="stylesheet" href="../Styles/General.css" />
-    <link rel="stylesheet" href="./Styles/navbar.css">
+      href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-</head>
+    <link rel="stylesheet" href="./Styles/General.css" />
+    <link rel="stylesheet" href="./Styles/navbar.css" />
 
-<body>
+    <!-- <script src="../JavaScripts/navs/login-registro.js" async></script> -->
+    <link rel="stylesheet" href="./Styles/login-registro.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <!-- <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"
+              ><img
+                src="../img/logo1.png"
+                alt="MeetMeat"
+                target="_parent"
+                class="logo-nav"
+            /></a>
 
-    <div id="header">
-      <nav class="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"
-            ><img
-              src="../img/logo1.png"
-              alt="MeetMeat"
-              target="_parent"
-              class="logo-nav"
-          /></a>
-  
-          <!-- CARRITO -->
-          <!-- <div class="container-icon">
-            <img class="icon-cart" src="/img/meat.svg">  
-            <div class="count-products">
-              <span>0</span>
-            </div>
-            <div class="container-cart-products hidden-cart">
-              <p class="cart-empty">El carrito está vacío</p>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                  Meet Meat
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      aria-current="page"
+                      href="../index.html"
+                      >Inicio</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/acercaDeBelicones.html"
+                      >Acerca de Belicones</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/acercaDeNosotros.html"
+                      >Acerca de Meet Meat</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/menuoficial.html"
+                      >Steak Garage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/workshop.html"
+                      >Workshop</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/galery.html"
+                      >Blog</a
+                    >
+                  </li>
+                  <hr />
+                  <li class="nav-item">
+                    <a
+                      class="nav-link texto-navegacion"
+                      href="../pages/contactanos.html"
+                      >Contáctanos</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div> -->
-          <!-- FIN CARRITO -->
-  
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
-                Meet Meat
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active texto-navegacion "
-                    aria-current="page"
-                    href="../index.html"
-                    >Inicio</a
-                  >
-                </li>
-                <hr>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/acercaDeBelicones.html"
-                    >Acerca de Belicones</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/acercaDeNosotros.html"
-                    >Acerca de Meet Meat</a
-                  >
-                </li>
-                <hr>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/menuoficial.html"
-                    >Steak Garage</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/workshop.html"
-                    >Workshop</a
-                  >
-                </li>
-                <hr>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/galery.html"
-                    >Blog</a
-                  >
-                </li>
-                <hr>
-                <li class="nav-item">
-                  <a class="nav-link texto-navegacion" href="../pages/contactanos.html"
-                    >Contáctanos</a
-                  >
-                </li>
-              </ul>
-            </div>
+        </nav>
+      </div>
+      <div id="content">
+        <img
+          class="img-fluid"
+          src="./img/LOGO MEET MEAT SIN FONDO BLANCO-02.png"
+          alt="logo meetMeatBlanco
+        "
+        />
+        <form id="login" style="display: none" class="imagenFondo">
+          <p id="respuestaServidorLogin" class="texto-navegacion"></p>
+          <div class="form-floating">
+            <input type="email" class="form-control texto-navegacion
+            borde-modificado" id="correoLogin"
+            name="correo"//placeholder="name@example.com" required
+            />
+            <label for="correoLogin" class="texto-navegacion">Correo</label>
           </div>
-        </div>
-      </nav>
-    </div>
+          <div class="form-floating">
+            <input type="password" class="form-control texto-navegacion
+            borde-modificado" id="contrasenaLogin" name="contraseña"
+            //placeholder="Password" required />
+            <label for="contrasenaLogin" class="texto-navegacion"
+              >Contraseña</label
+            >
+          </div>
 
-      <div class="img-fluid parent">
-        
-        <div class=" div1"> <img class="img-fluid img" src="../img/LOGO MEET MEAT SIN FONDO BLANCO-02.png"
-                alt="logo meetMeatBlanco" align="rigth" /> </div>
-
-
-        <div class="div2">
-
-            <img class="img-fluid rounded-start img" src="../img/DSC_2687.jpg" alt="Brocheta en llamas" height="800" align="left" />
-
-        </div>
-        <div class="div3">
-            <h1>¡Bienvenido a Meet Meat!</h1>
-
-
-            <p>
-                Estamos orgullosos de ser los expertos en la entrega de la mejor experiencia de asado directamente a tu
-                puerta en Mérida. Somos apasionados por la calidad de nuestros steaks y por enseñar a nuestros clientes
-                los secretos de un asado perfecto a través de nuestros emocionantes workshops.
-            </p>
-        </div>
-        <div class="div4"> <img class="img-fluid " src="/img/imagen_2024-01-06_140606955.png" alt="bowls de especias"
-                width="854" height="hug" align="center" /> </div>
-        <div class="div5"> <img class="img-fluid rounded-start img" src="/img/IMG_9910.jpg" alt="Brocheta en llamas" width="949"
-                 align="left" /> </div>
-        <div class="div6">
-            <h1>La mejor selección de Steaks de la Ciudad.</h1>
-
-
-            <p>
-                Descubre la excelencia en cada bocado con nuestra selección premium de steaks, cuidadosamente escogidos
-                para garantizar sabor, terneza y jugosidad inigualables. Nos esforzamos por ofrecer productos de la más
-                alta calidad para que puedas disfrutar de momentos inolvidables con tus seres queridos, directamente
-                desde la comodidad de tu hogar.
-            </p>
-        </div>
-        <div class="div7"> <img class="img-fluid rounded-start img" src="/img/40b4820c-7d05-42a6-b1b8-bb0f2c034c9f.jpg"
-                alt="Platillo de corte fino con emplatado elegante"  align="right" /> </div>
-        <div class="div8">
-            <h1>Transformate en el King de la Parrilla.</h1>
-
-
-            <p>
-                Nuestros workshops de asado te brindarán la oportunidad de perfeccionar tus habilidades culinarias,
-                aprender técnicas especializadas y sumergirte en el mundo del asado de la mano de nuestros expertos
-                parrilleros. ¡Conviértete en el rey de la parrilla y sorprende a todos con tus habilidades recién
-                adquiridas!
-            </p>
-        </div>
-        <div class="div10"> <img class="img-fluid rounded-start img" src="/img/DSC00361.jpg" alt="bowls de especias" 
-                height="hug" align="center" /> </div>
-        <div class="div9">
-            <h1 class="Qa">Sabor, calidad y pasión en cada bocado.</h1>
-
-
-            <p class="Qa2">
-                Nos esforzamos por superar tus expectativas en cada entrega. ¡Haz tu pedido ahora y descubre por qué
-                somos los preferidos de Mérida cuando se trata de steaks de primera calidad y workshops de asado
-                emocionantes!
-
-                ¡Gracias por elegirnos para ser parte de tus momentos más deliciosos!
-
-            </p>
-        </div>
+          <button class="btn texto-navegacion" type="submit">
+            Iniciar sesion
+          </button>
+          <p class="btn texto-navegacion button-sin-fondo" id="textoRegistro">
+            ¿No tienes cuenta?, ¡Registrate aqui!
+          </p>
+        </form>
+        <form id="registro" style="display: flex">
+          <p id="respuestaServidor" class="texto-navegacion"></p>
+          <div class="form-floating">
+            
+            <input
+              type="email"
+              class="form-control texto-navegacion borde-modificado"
+              id="correoRegistro"
+              name="correo"
+              required
+            />
+            <label for="correoRegistro" class="texto-navegacion">Correo</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasenaRegistro"
+              name="contraseña"
+              required
+            />
+            <label for="contrasenaRegistro" class="texto-navegacion"
+              >Contraseña</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasenaRegistroValidacion"
+              name="validar contraseña"
+              required
+            />
+            <label for="contrasenaRegistroValidacion" class="texto-navegacion"
+              >Escribe nuevamente la contraseña</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="nombreRegistro"
+              name="nombre"
+              required
+            />
+            <label for="nombreRegistro" class="texto-navegacion">Nombre</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="apellidosRegistro"
+              name="apellidos"
+              required
+            />
+            <label for="apellidosRegistro" class="texto-navegacion"
+              >Apellidos</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="number"
+              class="form-control texto-navegacion borde-modificado"
+              id="telefonoRegistro"
+              name="telefono"
+              required
+            />
+            <label for="telefonoRegistro" class="texto-navegacion"
+              >Telefono</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="direccionRegistro"
+              name="direccion"
+              required
+            />
+            <label for="direccionRegistro" class="texto-navegacion"
+              >Direccion</label
+            >
+          </div>
+          <button class="btn texto-navegacion" type="submit">
+            Crear usuario
+          </button>
+          <p class="btn texto-navegacion button-sin-fondo" id="textoLogin">
+            ¿Ya tienes cuenta?, ¡Inicia sesion aqui!
+          </p>
+        </form>
       </div>
 
-
-<iframe
-    src="../pages/footer.html"
-    frameborder="0"
-    class="footer"
-  ></iframe>
-    
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
-
+      <div class="footer-container">
+        <iframe
+          src="../pages/footer.html"
+          frameborder="0"
+          class="footer"
+        ></iframe>
+      </div>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./JavaScripts/login-registro.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

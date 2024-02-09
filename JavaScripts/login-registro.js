@@ -11,6 +11,7 @@ const textoLogin = document.getElementById("textoLogin");
 const formLogin = document.getElementById("login");
 const correoLogin = document.getElementById("correoLogin");
 const contrasenaLogin = document.getElementById("contrasenaLogin");
+const mensajeServidorLogin = document.getElementById("respuestaServidorLogin");
 //& Registro
 const formRegistro = document.getElementById("registro");
 const correoRegistro = document.getElementById("correoRegistro");
@@ -22,6 +23,9 @@ const nombreRegistro = document.getElementById("nombreRegistro");
 const apellidosRegistro = document.getElementById("apellidosRegistro");
 const telefonoRegistro = document.getElementById("telefonoRegistro");
 const direccionRegistro = document.getElementById("direccionRegistro");
+const mensajeServidorRegistro = document.getElementById(
+  "respuestaServidorRegistro"
+);
 
 //*Variables para axios
 const baseURL = "http://localhost:8080/api/v1/";
@@ -209,6 +213,14 @@ formRegistro.onsubmit = (e) => {
 async function postUsuario(usuario) {
   try {
     const response = await axios.post(postUsuarioURL, usuario);
+    const data = await response.data;
+    if (data.object !== null) {
+      localStorage.setItem("usuario", JSON.stringify(data.object));
+      console.log(localStorage.getItem("usuario"));
+      location.href = "./pages/inicio.html";
+    } else {
+      mensajeServidorRegistro.innerText = data.mensaje;
+    }
   } catch (error) {
     console.log(error);
   }
@@ -224,27 +236,25 @@ formLogin.onsubmit = (e) => {
 
   //~Aqui ira la solicitud a la api para verificar si el usuario existe en la base de datos
 
-  try {
-    const response = getUsuarioLogin(
-      correoLoginValidado,
-      contrasenaLoginValidada
-    );
-    response
-      .then((data) => data.data)
-      .then((data) => {
-        usuario = data.object;
-        mensaje = data.mensaje;
-        localStorage.setItem("User", usuario);
-        location.href = "../index.html";
-      });
-  } catch (error) {
-    console.log(error);
-  }
+  getUsuarioLogin(correoLoginValidado, contrasenaLoginValidada);
 };
 
 async function getUsuarioLogin(correo, contra) {
+  console.log(correo, contra);
   try {
-    const response = await axios.get(getUsuarioURL + correo + "/" + contra);
+    const response = await axios.get(
+      getUsuarioURL + correo + "/" + contra.toString()
+    );
+
+    const data = await response.data;
+
+    if (data.object !== null) {
+      localStorage.setItem("usuario", JSON.stringify(data.object));
+
+      location.href = "./pages/inicio.html";
+    } else {
+      mensajeServidorLogin.innerText = data.mensaje;
+    }
     return response;
   } catch (error) {
     console.log(error);
