@@ -1,2 +1,0 @@
-Carpeta JavaScripts
-Se colocaran todos los archivos con una extension .js
