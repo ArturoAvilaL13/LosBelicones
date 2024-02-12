@@ -1,0 +1,38 @@
+#carneForm {
+  max-height: fit-content;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#carneForm > div > input,
+.tamanoDiv {
+  width: 400px;
+  border-radius: 5px;
+}
+
+select {
+  height: 54px;
+  background: none !important;
+  border: none !important;
+}
+
+.tamanoDiv > label {
+  background: none !important;
+  border: none !important;
+  border-right: 2px black solid !important;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 430px) {
+  #carneForm > div > input {
+    width: 300px;
+  }
+}
