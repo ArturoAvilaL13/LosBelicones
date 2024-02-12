@@ -1,2 +1,0 @@
-Carpeta Styles
-Se colocaran todos los archivos con extension .css
