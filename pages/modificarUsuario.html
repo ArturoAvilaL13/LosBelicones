@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Meat</title>
+    <link rel="shortcut icon" href="../img/svg/steak-svgrepo-com.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Styles/General.css" />
+    <link rel="stylesheet" href="../Styles/navbar.css" />
+    <link rel="stylesheet" href="../Styles/login-registro.css" />
+    <link rel="stylesheet" href="../styles/modificarUsuario.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../pages/inicio.html"
+              ><img
+                src="../img/logos/logo1.png"
+                alt="MeetMeat"
+                target="_parent"
+                class="logo-nav"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                  Meet Meat
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul
+                  class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                  id="navbarOpciones"
+                ></ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--Aqui va todo el contendo-->
+      <div id="content">
+        <h3 class="titulo">Actualiza tus datos</h3>
+        <form id="registro" style="display: flex">
+          <p id="respuestaServidor" class="texto-navegacion"></p>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control texto-navegacion borde-modificado"
+              id="correo"
+              name="correo"
+              placeholder=""
+              required
+            />
+            <label for="correo" class="texto-navegacion">Correo</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasena"
+              name="contraseña"
+              placeholder=""
+              required
+            />
+            <label for="contrasena" class="texto-navegacion">Contraseña</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-navegacion borde-modificado"
+              id="contrasenaValidacion"
+              name="validar contraseña"
+              placeholder=""
+              required
+            />
+            <label for="contrasenaValidacion" class="texto-navegacion"
+              >Escribe nuevamente la contraseña</label
+            >
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="nombre"
+              name="nombre"
+              placeholder=""
+              required
+            />
+            <label for="nombre" class="texto-navegacion">Nombre</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="apellidos"
+              name="apellidos"
+              placeholder=""
+              required
+            />
+            <label for="apellidos" class="texto-navegacion">Apellidos</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="number"
+              class="form-control texto-navegacion borde-modificado"
+              id="telefono"
+              name="telefono"
+              placeholder=""
+              required
+            />
+            <label for="telefono" class="texto-navegacion">Telefono</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-navegacion borde-modificado"
+              id="direccion"
+              name="direccion"
+              placeholder=""
+              required
+            />
+            <label for="direccion" class="texto-navegacion">Direccion</label>
+          </div>
+          <button class="btn texto-navegacion" type="submit">
+            Guardar datos
+          </button>
+        </form>
+      </div>
+      <!--Aqui termina todo el contenido-->
+      <div class="footer-container">
+        <iframe
+          src="../pages/footer.html"
+          frameborder="0"
+          class="footer"
+        ></iframe>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="../javaScripts/checarLocalStoragePages.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../javaScripts/navbarOpciones.js"></script>
+    <script type="module" src="../javaScripts/modificarUsuario.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
