@@ -1,0 +1,32 @@
+.alerta {
+  background-color: none;
+}
+
+#eliminarCuenta {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+#eliminarCuenta > div > input {
+  width: 400px;
+}
+
+#eliminarCuenta > button {
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*No se utiliza*/
+}
+
+@media only screen and (max-width: 430px) {
+  #eliminarCuenta > div > input {
+    width: 300px;
+  }
+}

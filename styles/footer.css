@@ -1,0 +1,105 @@
+.container {
+  height: 130px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #290106;
+}
+
+.arriba {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 85px;
+  width: 100%;
+}
+
+.bonitobox {
+  flex: 1 0 30vw;
+}
+
+.contacto {
+  text-align: center;
+}
+
+.logofooter {
+  height: 80px;
+  padding-left: 20px;
+}
+
+.icons-redes {
+  width: 25px;
+  height: 25px;
+  color: aliceblue;
+}
+
+
+/* hovers para iconos de redes */
+.bi-facebook:hover{
+color: #102fdd;
+}
+
+.bi-instagram:hover{
+  color: #fd093e;
+}
+.bi-whatsapp:hover{
+    color: #11c92a;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 20px;
+  gap: 3vw;
+}
+
+.abajo {
+  padding: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 517px) {
+  .arriba {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+  }
+  .logofooter {
+    height: 80px;
+    padding-left: 10px;
+  }
+  .redes {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    gap: 3vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .arriba {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+  }
+  .logofooter {
+    height: 80px;
+    padding-left: 0;
+  }
+  .redes {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5px;
+    gap: 2vw;
+  }
+}
