@@ -1,2 +1,0 @@
-Carpeta img.
-Sera una carpeta donde se alojara todo el contenido multimedia que se utilizara en el proyecto.
