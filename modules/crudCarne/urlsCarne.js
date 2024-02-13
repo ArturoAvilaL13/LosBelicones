@@ -1,5 +1,5 @@
 //~URL base para la api
-const baseURL = "http://localhost:8080/api/v1/";
+import { baseURL } from "../urlBase.js";
 
 //~URL para la rutina de carne
 //& Post
