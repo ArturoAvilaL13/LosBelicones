@@ -30,11 +30,10 @@ p {
 .center-text {
   text-align: center;
 }
-
 .disenoCard {
   background: none !important;
   border: none !important;
-  max-width: 45%;
+  max-width: 92%;
   max-height: 300px;
 }
 

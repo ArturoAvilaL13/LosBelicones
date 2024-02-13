@@ -31,8 +31,37 @@ select {
   align-items: center;
 }
 
+#archivo:hover {
+  box-shadow: 0px 0px 2px 2px #eb953f !important;
+}
+
+#divImagen {
+  max-width: 390px !important;
+  max-height: 390px !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: auto;
+}
+
+#imagen {
+  width: 95%;
+  height: 95%;
+}
+
 @media only screen and (max-width: 430px) {
-  #carneForm > div > input {
+  #carneForm > div > input,
+  .tamanoDiv {
     width: 300px;
+  }
+  #divImagen {
+    max-width: 250px !important;
+    max-height: 250px !important;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: auto;
   }
 }
