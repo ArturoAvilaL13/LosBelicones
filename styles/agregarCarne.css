@@ -50,6 +50,13 @@ select {
   height: 95%;
 }
 
+.botonesFormulario {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 @media only screen and (max-width: 430px) {
   #carneForm > div > input,
   .tamanoDiv {
@@ -63,5 +70,17 @@ select {
     justify-content: center;
     flex-direction: column;
     padding: auto;
+  }
+  .botonesFormulario {
+    width: 60%;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .botonesFormulario > button {
+    width: 250px;
   }
 }

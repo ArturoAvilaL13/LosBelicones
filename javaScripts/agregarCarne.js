@@ -10,6 +10,10 @@ import {
 import { blobToBase64 } from "../modules/imagesBase64/blobManager.js";
 import { reduce_image_file_size } from "../modules/imagesBase64/resizeImage.js";
 
+import { getTiposDeCarnes } from "../modules/crudTipos/crudTipo.js";
+
+import { postCarne } from "../modules/crudCarne/crudCarne.js";
+
 const carneForm = document.getElementById("carneForm");
 const tipoCarne = document.getElementById("tipoCarne");
 const nombreCarne = document.getElementById("nombre");
@@ -17,9 +21,10 @@ const descripcion = document.getElementById("descripcion");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const imagenArchivo = document.getElementById("imagenArchivo");
-const mensajeServidor = document.getElementById("mensajeServidor");
+const mensajeImagen = document.getElementById("mensajeImagen");
 const divImagen = document.getElementById("divImagen");
-
+const MensajeDelServidor = document.getElementById("MensajeDelServidor");
+let imagenProcesada = null;
 //~Validamos los campos
 tipoCarne.addEventListener("invalid", (e) => {
   validarVacio(e.target);
@@ -64,11 +69,18 @@ imagenArchivo.addEventListener("invalid", (e) => {
 });
 imagenArchivo.addEventListener("change", async (e) => {
   validarVacio(e.target);
-  const imagenProcesada = await mostrarImagen(e.target.files[0]);
-  imagen.src = imagenProcesada;
-  mensajeServidor.innerText = "";
-  divImagen.style.display = "flex";
-  imagen.style.display = "flex";
+  if (e.target.value === "") {
+    imagen.src = "";
+    mensajeImagen.innerText = "Ninguna Imagen seleccionada";
+    divImagen.style.display = "none";
+    imagen.style.display = "none";
+  } else {
+    imagenProcesada = await mostrarImagen(e.target.files[0]);
+    imagen.src = imagenProcesada;
+    mensajeImagen.innerText = "";
+    divImagen.style.display = "flex";
+    imagen.style.display = "flex";
+  }
 });
 
 const mostrarImagen = async (imageFile) => {
@@ -76,9 +88,54 @@ const mostrarImagen = async (imageFile) => {
   const myB64Resized = await reduce_image_file_size(img);
   return myB64Resized;
 };
+
+const obtenerTiposDeCarnes = async () => {
+  const response = await getTiposDeCarnes();
+  console.log(response);
+  const mensaje = response.mensaje;
+  const datas = response.object;
+  datas.forEach((data) => {
+    agretarTipoAlSelect(data);
+  });
+};
+obtenerTiposDeCarnes();
+const agretarTipoAlSelect = (tipo) => {
+  const opcion = document.createElement("option");
+  opcion.value = tipo.idTipoDeCorte;
+  opcion.innerText = tipo.tipoDeCorte;
+
+  tipoCarne.appendChild(opcion);
+};
+
 //~Agregar funcionalidad al formulario
 carneForm.onsubmit = async (e) => {
   e.preventDefault();
-  console.log("Todos los campos fueron validados");
+  const carneValidada = {
+    nombreCarne: nombreCarne.value,
+    descripcionCarne: descripcion.value,
+    precioCarne: parseFloat(precio.value), //*convertir a float
+    imagenCarne: imagenProcesada,
+    fkIdTipoDeCorte: Number(tipoCarne.value), //*convertir a int
+  };
   ///~Agregar conectividad a la api y hacer las variables necesarias
+  const response = await postCarne(carneValidada);
+  const mensaje = response.mensaje;
+  const data = response.object;
+
+  if (data === null) {
+    MensajeDelServidor.innerText = mensaje;
+    setTimeout(() => {
+      MensajeDelServidor.innerText = "";
+    }, 3000);
+  } else {
+    MensajeDelServidor.innerText = mensaje;
+    setTimeout(() => {
+      MensajeDelServidor.innerText = "";
+      carneForm.reset();
+      imagen.src = "";
+      mensajeImagen.innerText = "Ninguna Imagen seleccionada";
+      divImagen.style.display = "none";
+      imagen.style.display = "none";
+    }, 5000);
+  }
 };

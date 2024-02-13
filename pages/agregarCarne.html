@@ -85,6 +85,8 @@
       <!--Aqui va todo el contendo-->
       <div id="content">
         <h2 class="titulo">Agrega un tipo de corte/carne nuevo</h2>
+        <br /><br />
+        <h3 id="MensajeDelServidor" class="subtitulo"></h3>
         <form id="carneForm">
           <div class="form-floating mb-3">
             <div class="input-group tamanoDiv borde-modificado">
@@ -96,7 +98,6 @@
                   required
                 >
                   <option value="">Elige que tipo de corte es</option>
-                  <option value="1">2</option>
                 </select>
                 <div class="select_arrow"></div>
               </div>
@@ -144,7 +145,7 @@
               >Precio aproximado por KG</label
             >
           </div>
-          <h3 id="mensajeServidor" class="texto-navegacion">
+          <h3 id="mensajeImagen" class="texto-navegacion">
             Ninguna Imagen seleccionada
           </h3>
           <div class="form-floating mb-3" id="divImagen">
@@ -169,9 +170,14 @@
               />
             </div>
           </div>
-          <button class="btn texto-navegacion borde-modificado" type="submit">
-            Agregar Carnita
-          </button>
+          <div class="botonesFormulario">
+            <button class="btn texto-navegacion borde-modificado" type="submit">
+              Agregar Carnita
+            </button>
+            <button class="btn texto-navegacion borde-modificado" type="reset">
+              Resetear formulario
+            </button>
+          </div>
         </form>
       </div>
       <!--Aqui termina todo el contenido-->
