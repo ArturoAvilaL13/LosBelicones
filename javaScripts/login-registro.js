@@ -17,9 +17,7 @@ import {
 //&Para revisar si ya ingreso el usuario
 import { revisarLocalStorageUsuario } from "../modules/localStorage.js";
 if (revisarLocalStorageUsuario()) {
-  console.log("si hay algo almacenado");
-} else {
-  console.log("no hay nada almacenado");
+  location.href = "./pages/inicio.html";
 }
 //* Divs a mostar/ocultar
 const loginDiv = document.getElementById("login");

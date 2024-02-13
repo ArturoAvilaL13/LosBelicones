@@ -126,18 +126,24 @@ nav {
 .borde-modificado {
   border: none !important;
   background: #860606 !important;
-  -webkit-box-shadow: 5px 7px 20px 12px rgba(27, 1, 1, 0.7);
-  -moz-box-shadow: 5px 7px 20px 12px rgba(27, 1, 1, 0.7);
-  box-shadow: 5px 7px 20px 12px rgba(27, 1, 1, 0.7);
+  -webkit-box-shadow: 0px 0px 20px 12px rgba(27, 1, 1, 0.7);
+  -moz-box-shadow: 0px 0px 20px 12px rgba(27, 1, 1, 0.7);
+  box-shadow: 0px 0px 20px 12px rgba(27, 1, 1, 0.7);
 }
 
 textarea:focus,
 input:focus {
   background: #860606 !important;
 }
+
 label::after {
   background: none !important;
-  border: none !important;
+}
+
+/*Aqui se modifica el boxshadow de los campos input*/
+.form-control:focus,
+button:hover {
+  box-shadow: 0px 0px 2px 2px #eb953f !important;
 }
 
 .footer-container {
@@ -175,6 +181,7 @@ label::after {
   right: 0;
   top: 0;
   bottom: 0;
+  opacity: 1;
 }
 
 .file-select input[type="file"] {

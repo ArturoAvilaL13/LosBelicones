@@ -19,8 +19,8 @@
   height: 400px;
   overflow: hidden;
   margin: 15px 15px;
-  border: solid #eb953f 3px;
-  border-radius: 84px 84px 168px 168px / 45px 45px 22px 22px;
+  /* border: solid #eb953f 3px; */
+  border-radius: 20px;
   background: url(../img/fondocarbon.jpg);
   background-position: center center;
   background-size: cover;
