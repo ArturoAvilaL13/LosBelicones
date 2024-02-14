@@ -137,3 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
   cerrarTuOrdenIcono.addEventListener('click', cerrarTuOrden);
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var svgElement = document.getElementById('carrito-icono');
+    var tuOrdenDiv = document.getElementById('tu-orden');
+  
+    svgElement.addEventListener('click', function () {
+      tuOrdenDiv.classList.toggle('below-svg');
+    });
+  });
