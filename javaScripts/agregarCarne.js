@@ -69,6 +69,7 @@ precio.addEventListener("input", (e) => {
 imagenArchivo.addEventListener("invalid", (e) => {
   validarVacio(e.target);
 });
+
 imagenArchivo.addEventListener("change", async (e) => {
   validarVacio(e.target);
   if (e.target.value === "") {
