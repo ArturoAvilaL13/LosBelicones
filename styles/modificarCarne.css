@@ -1,0 +1,22 @@
+#divModificarCarne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#divImagenModificar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: fit-content;
+  min-width: 300px;
+  gap: 10px;
+}
+
+.imagenModificar {
+  width: 300px;
+  height: 190px;
+  border-radius: 5px;
+}

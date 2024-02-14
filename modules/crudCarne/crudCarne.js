@@ -51,7 +51,7 @@ async function getCarnesByTipo(idTipo) {
 
 async function putCarne(carne) {
   try {
-    const url = `${putCarneByIdURL}${carne.idCarne}`;
+    const url = `${putCarneByIdURL}${Number(carne.idCarne)}`;
     const response = await axios.put(url, carne);
     const data = await response.data;
     return data;
