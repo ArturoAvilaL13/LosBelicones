@@ -12,27 +12,10 @@ const buttonDivAgregarCarne = document.getElementById("buttonAgregarCorteDiv");
 const divAgregarCarne = document.getElementById("agregarCarneDiv");
 const tituloRutina = document.getElementById("tituloRutina");
 const tipoCorteFiltro = document.getElementById("tipoCarneFiltro");
-let tiposDeCortes = null;
-let carnesCompletas = null;
+let tiposDeCortes;
+let carnesCompletas;
 const buttonCancelarModificacion = document.getElementById("cancelarCambios");
 
-const llenarTipoDeCortes = async () => {
-  const response = await getTiposDeCarnes();
-  tiposDeCortes = response.object;
-  tiposDeCortes.forEach((corte) => {
-    agretarTipoAlSelect(corte);
-  });
-};
-
-const agretarTipoAlSelect = (tipo) => {
-  const opcion = document.createElement("option");
-  opcion.value = tipo.idTipoDeCorte;
-  opcion.innerText = tipo.tipoDeCorte;
-
-  tipoCorteFiltro.appendChild(opcion);
-};
-
-llenarTipoDeCortes();
 const creaCard = (divContenedor, carne) => {
   const divCard = document.createElement("div");
   divCard.classList.add("card");
@@ -154,7 +137,21 @@ const desplegarTodosLosCortes = async () => {
   while (divCortes.firstChild) {
     divCortes.removeChild(divCortes.firstChild);
   }
+
+  carnesCompletas.forEach((carne) => {
+    creaCard(divCortes, carne);
+  });
+};
+
+const desplegarTodosLosCortesInicio = async () => {
   carnesCompletas = await getCarnesFromDB();
+  const response = await getTiposDeCarnes();
+
+  tiposDeCortes = response.object;
+  tiposDeCortes.forEach((corte) => {
+    agretarTipoAlSelect(corte);
+  });
+
   if (carnesCompletas !== null) {
     carnesCompletas.forEach((carne) => {
       creaCard(divCortes, carne);
@@ -162,6 +159,24 @@ const desplegarTodosLosCortes = async () => {
   }
 };
 
+// const llenarTipoDeCortes = async () => {
+//   const response = await getTiposDeCarnes();
+
+//   tiposDeCortes = response.object;
+//   tiposDeCortes.forEach((corte) => {
+//     agretarTipoAlSelect(corte);
+//   });
+// };
+
+const agretarTipoAlSelect = (tipo) => {
+  const opcion = document.createElement("option");
+  opcion.value = tipo.idTipoDeCorte;
+  opcion.innerText = tipo.tipoDeCorte;
+
+  tipoCorteFiltro.appendChild(opcion);
+};
+
+desplegarTodosLosCortesInicio();
 const desplegarCortesPorTipo = (id) => {
   while (divCortes.firstChild) {
     divCortes.removeChild(divCortes.firstChild);
@@ -175,8 +190,6 @@ const desplegarCortesPorTipo = (id) => {
     }
   });
 };
-
-desplegarTodosLosCortes();
 
 buttonDivAgregarCarne.addEventListener("click", () => {
   cambiarEstadoDivAgregarCarne();
