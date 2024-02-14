@@ -1,0 +1,103 @@
+  .returnCart-titulo {
+    font-size: var(--tamano-titulos-pc);
+    font-family: var(--fuente-texto);
+    text-align: center;
+  }
+  .contenido{
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  #textoCheckout{
+    font-size: 5vw !important;
+  }
+  .items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #D9D9D9;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0);
+    border-radius: 3px;
+    margin-bottom: 5%;
+    row-gap: 3px;
+  }
+  
+  .card {
+    border-radius: 0px;
+    border: none;
+    background: #D9D9D9;
+  }
+  #h1TextoDatos{
+    color: #000000 !important;
+  }
+    
+  #checkoutForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #D9D9D9;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0);
+    border-radius: 3px;
+    row-gap: 15px;  
+  }
+  .inputCheckoutForm{
+    background-color: var(--color-fondo);
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  }
+input, select {
+  color: #fff;
+  background-color: var(--color-fondo);
+}
+
+  .inputCheckoutForm > input,
+  .inputCheckoutForm > select{
+    width: 100%;
+    padding: none;
+    background: none !important;
+    border: none !important;
+  }
+  .inputCheckoutForm:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #860606; 
+  }
+.atras, .buttonCheckout{
+    width: 100%;
+}
+#atras, #buttonCheckout{
+background-color: var(--color-fondo);
+color: #fff;
+padding: 30px;
+font-weight: 600;
+width: 50%;
+border: 10px #ffffff;
+border-radius: 10px;
+text-align: center;
+box-shadow: 5px 5px 10px rgb(0, 0, 0);
+transition: transform 0.3s ease-in-out, 
+box-shadow 0.3s ease-in-out;
+ }
+
+ label {
+  transition: transform 0.3s ease-in-out;
+}
+
+label:hover {
+  transform: translateX(-20px);
+}
+
+#buttonCheckout:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 100px #eb953f !important; 
+}
+#atras:hover {
+  transform: scale(1, 0.9); 
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3)!important;
+}
