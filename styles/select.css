@@ -19,10 +19,10 @@
 .select select::-ms-expand {
   display: none;
 }
-.select select:hover,
+/* .select select:hover,
 .select select:focus {
-  background: #860606;
-}
+  background: #860606 !important;
+} */
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -40,8 +40,12 @@
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-select > option {
-  background: #860606;
-  border: none !;
+option {
+  background-color: #860606;
+  border: none !important;
   border-radius: 10px;
+}
+
+option:hover {
+  background-color: pink !important;
 }

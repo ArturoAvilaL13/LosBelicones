@@ -24,8 +24,8 @@ const opciones = [
 
 const opcionesAdmin = [
   {
-    titulo: "Agregar un corte de carne",
-    url: "./agregarCarne.html",
+    titulo: "Agregar/Modificar/Eliminar Carnes",
+    url: "./modificarEliminarCarne.html",
     hr: false,
   },
   { titulo: "", url: "", hr: true },

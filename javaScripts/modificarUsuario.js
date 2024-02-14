@@ -104,9 +104,6 @@ form.onsubmit = async (e) => {
     idTipoDeUsuario: Number(tipoUsuario),
   };
 
-  console.log(datosValildados);
-  console.log(datosUsuario);
-
   if (JSON.stringify(datosValildados) === JSON.stringify(datosUsuario)) {
     mensajeServidor.innerText = "Ningun campo fue modificado";
     setTimeout(() => {
@@ -126,7 +123,6 @@ form.onsubmit = async (e) => {
       setTimeout(() => {
         mensajeServidor.innerText = "";
       }, 3000);
-      llenarFormulario(datosUsuario);
     }
   }
 };

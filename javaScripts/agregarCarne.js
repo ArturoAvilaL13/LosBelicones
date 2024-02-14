@@ -14,6 +14,8 @@ import { getTiposDeCarnes } from "../modules/crudTipos/crudTipo.js";
 
 import { postCarne } from "../modules/crudCarne/crudCarne.js";
 
+import { desplegarTodosLosCortes } from "./modificarEliminarCarne.js";
+
 const carneForm = document.getElementById("carneForm");
 const tipoCarne = document.getElementById("tipoCarne");
 const nombreCarne = document.getElementById("nombre");
@@ -91,7 +93,7 @@ const mostrarImagen = async (imageFile) => {
 
 const obtenerTiposDeCarnes = async () => {
   const response = await getTiposDeCarnes();
-  console.log(response);
+  // console.log(response);
   const mensaje = response.mensaje;
   const datas = response.object;
   datas.forEach((data) => {
@@ -129,6 +131,8 @@ carneForm.onsubmit = async (e) => {
     }, 3000);
   } else {
     MensajeDelServidor.innerText = mensaje;
+    MensajeDelServidor.scrollIntoView({ behavior: "smooth" });
+    desplegarTodosLosCortes();
     setTimeout(() => {
       MensajeDelServidor.innerText = "";
       carneForm.reset();
