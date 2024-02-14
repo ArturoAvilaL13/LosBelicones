@@ -19,7 +19,6 @@ const buttonCancelarModificacion = document.getElementById("cancelarCambios");
 const llenarTipoDeCortes = async () => {
   const response = await getTiposDeCarnes();
   tiposDeCortes = response.object;
-  console.log(tiposDeCortes);
   tiposDeCortes.forEach((corte) => {
     agretarTipoAlSelect(corte);
   });
@@ -156,9 +155,11 @@ const desplegarTodosLosCortes = async () => {
     divCortes.removeChild(divCortes.firstChild);
   }
   carnesCompletas = await getCarnesFromDB();
-  carnesCompletas.forEach((carne) => {
-    creaCard(divCortes, carne);
-  });
+  if (carnesCompletas !== null) {
+    carnesCompletas.forEach((carne) => {
+      creaCard(divCortes, carne);
+    });
+  }
 };
 
 const desplegarCortesPorTipo = (id) => {
