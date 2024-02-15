@@ -15,6 +15,8 @@ const tipoCorteFiltro = document.getElementById("tipoCarneFiltro");
 let tiposDeCortes;
 let carnesCompletas;
 const buttonCancelarModificacion = document.getElementById("cancelarCambios");
+const buttonCancelarAgregar = document.getElementById("cancelarAgregar");
+const inicioPagina = document.getElementById("container");
 
 const creaCard = (divContenedor, carne) => {
   const divCard = document.createElement("div");
@@ -133,12 +135,15 @@ const getCarnesFromDB = async () => {
 };
 
 const desplegarTodosLosCortes = async () => {
+  // console.log("Desplegando todos los cortes");
+  carnesCompletas = await getCarnesFromDB();
   ponerSelectEnUnValor("", tipoCorteFiltro);
   while (divCortes.firstChild) {
     divCortes.removeChild(divCortes.firstChild);
   }
 
   carnesCompletas.forEach((carne) => {
+    // console.log(divCortes, carne);
     creaCard(divCortes, carne);
   });
 };
@@ -146,6 +151,10 @@ const desplegarTodosLosCortes = async () => {
 const desplegarTodosLosCortesInicio = async () => {
   carnesCompletas = await getCarnesFromDB();
   const response = await getTiposDeCarnes();
+
+  while (divCortes.firstChild) {
+    divCortes.removeChild(divCortes.firstChild);
+  }
 
   tiposDeCortes = response.object;
   tiposDeCortes.forEach((corte) => {
@@ -184,11 +193,15 @@ const desplegarCortesPorTipo = (id) => {
   if (divModificarCarne.style.display === "flex") {
     cambiarEstadoDivModificarCarne();
   }
-  carnesCompletas.forEach((carne) => {
-    if (carne.fkIdTipoDeCorte == id) {
-      creaCard(divCortes, carne);
-    }
-  });
+  if (id == "") {
+    desplegarTodosLosCortes();
+  } else {
+    carnesCompletas.forEach((carne) => {
+      if (carne.fkIdTipoDeCorte == id) {
+        creaCard(divCortes, carne);
+      }
+    });
+  }
 };
 
 buttonDivAgregarCarne.addEventListener("click", () => {
@@ -223,7 +236,12 @@ const cambiarEstadoDivModificarCarne = () => {
 
 buttonCancelarModificacion.addEventListener("click", () => {
   cambiarEstadoDivModificarCarne();
-  buttonDivAgregarCarne.scrollIntoView({ behavior: "smooth" });
+  inicioPagina.scrollIntoView({ behavior: "smooth" });
+});
+
+buttonCancelarAgregar.addEventListener("click", () => {
+  cambiarEstadoDivAgregarCarne();
+  inicioPagina.scrollIntoView({ behavior: "smooth" });
 });
 
 export {

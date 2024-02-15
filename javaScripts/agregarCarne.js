@@ -121,7 +121,7 @@ carneForm.onsubmit = async (e) => {
     fkIdTipoDeCorte: Number(tipoCarne.value), //*convertir a int
   };
   ///~Agregar conectividad a la api y hacer las variables necesarias
-  console.log(carneValidada.imagenCarne);
+  // console.log(carneValidada.imagenCarne);
   const response = await postCarne(carneValidada);
   const mensaje = response.mensaje;
   const data = response.object;
@@ -134,7 +134,7 @@ carneForm.onsubmit = async (e) => {
   } else {
     MensajeDelServidor.innerText = mensaje;
     MensajeDelServidor.scrollIntoView({ behavior: "smooth" });
-    desplegarTodosLosCortes();
+    await desplegarTodosLosCortes();
     setTimeout(() => {
       MensajeDelServidor.innerText = "";
       carneForm.reset();
