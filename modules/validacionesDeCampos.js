@@ -4,7 +4,7 @@ const contieneEspaciosREGEX = /\s/;
 const emailREGEX = /^[\w.+\-]+@{1}\w+\.{1}com$/;
 const contieneCaracterEspecialREGEX = /[+!"#$%&'()*+,:;<=>?@^_`{|}~]/;
 const contieneLetrasAlfabetoREGEX = /[[a-z|A-Z]+/;
-const precioREGEX = /^\d{1,5}.{1}\d{1,2}$/;
+const precioREGEX = /^\d{0,5}(\.\d{1,2})?$/;
 //~funciones para las valicaciones de los campos
 function validarVacio(campo) {
   if (campo.value == "") {
@@ -84,7 +84,7 @@ function validarContieneLetras(campo) {
 function validarFormatoPrecio(campo) {
   if (!precioREGEX.test(campo.value)) {
     mensaje = `El campo ${campo.name} debe tener: 
-    maximo 5 numeros y 2 decimales
+    maximo 10 numeros y 2 decimales
     Ejemplos:
     500.90
     25.50
