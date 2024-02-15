@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    
+    <!-- Agregar la CDN de Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;600&family=Poppins&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;600&family=Poppins&family=Rubik+Mono+One&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>CATÁLOGO DE CARNE MEET MEAT</h1>
+        <div class="row mb-3">
+            <div class="col-md-6" id="uno">
+               <h5>Buscar por producto</h5> <input type="text" id="busqueda" class="form-control" placeholder="Buscar producto...">
+            </div>
+            <div class="col-md-6" id="dos">
+                <h5>Buscar por tipo de corte</h5><select id="tipo" class="form-control">
+                    <option value="">Todos los tipos</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="productos-lista"></div> <!--Aquí se agregan los productos de la lista-->>
+        
+        <!-- Icono de carrito -->
+        <div id="carrito-icono" class="position-fixed" style="top: 10px; right: 10px; cursor: pointer;">
+            <img src="./img/meat.svg" width="100" height="100" alt="Carrito de compras">
+            <span id="cart-counter" class="badge badge-pill badge-primary">0</span>
+        </div>
+
+        <!-- Sección "Tu orden" -->
+        <div id="tu-orden" style="display: none;">
+            <span id="cerrar-tu-orden" onclick="cerrarTuOrden()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">✖</span>
+            <h2>Tu orden</h2>
+            <ul id="carrito-lista" class="list-group"></ul>
+            <p>Total: <span id="total"></span></p>
+            <button id="boton-pago-tu-orden" class="btn btn-primary">Pagar</button>
+            <!-- Elemento para mostrar el mensaje de carrito vacío -->
+            <div id="cart-empty-message" class="alert alert-warning mt-3" role="alert" style="display: none;">
+                Tu carrito está vacío
+            </div>
+        </div>
+
+        <!-- Elemento para mostrar la alerta -->
+        <div id="alerta-pago" class="alert alert-danger fixed-top w-100 text-center" role="alert" style="display: none;">
+        </div>
+    </div>
+
+    <script defer src="./app.js"></script>
+</body>
+</html>
