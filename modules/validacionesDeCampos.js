@@ -84,7 +84,7 @@ function validarContieneLetras(campo) {
 function validarFormatoPrecio(campo) {
   if (!precioREGEX.test(campo.value)) {
     mensaje = `El campo ${campo.name} debe tener: 
-    maximo 10 numeros y 2 decimales
+    maximo 5 numeros y 2 decimales
     Ejemplos:
     500.90
     25.50
