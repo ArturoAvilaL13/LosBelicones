@@ -212,7 +212,7 @@ carneFormModificar.onsubmit = async (e) => {
         imagenProcesadaNueva = "";
         buttonDivAgregarCarne.scrollIntoView({ behavior: "smooth" });
         carneFormModificar.reset();
-        //~ponerSelectEnUnValor("", corteCarne);//de momento no se utiliza
+        // ponerSelectEnUnValor("", corteCarne); //de momento no se utiliza
       }, 3000);
     }
   }
