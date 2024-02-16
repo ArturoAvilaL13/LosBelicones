@@ -54,7 +54,9 @@ select {
 
 #imagen {
   width: 95%;
+  max-width: 350px;
   height: 95%;
+  max-height: 350px;
 }
 
 .botonesFormulario {

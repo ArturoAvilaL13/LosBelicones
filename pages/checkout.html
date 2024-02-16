@@ -21,9 +21,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Styles/General.css" />
-    <link rel="stylesheet" href="../styles/checkout.css"/>
+    <link rel="stylesheet" href="../styles/checkout.css" />
     <link rel="stylesheet" href="../Styles/navbar.css" />
-    <link rel="stylesheet" href="../styles/select.css"/>
+    <link rel="stylesheet" href="../styles/select.css" />
   </head>
   <body>
     <div id="container">
@@ -85,12 +85,12 @@
       <!--Aqui va todo el contendo-->
       <div id="content">
         <div class="contenido">
-            <!--Titulo checkout -->
-        <div class="returnCart-titulo">
-            <h1 class="titulo" id="textoCheckout">CHECKOUT </h1>
-        </div>
+          <!--Titulo checkout -->
+          <div class="returnCart-titulo">
+            <h1 class="titulo" id="textoCheckout">CHECKOUT</h1>
+          </div>
           <!--Lista de productos comprados -->
-        
+
           <div class="items" id="items">
             <!-- <div class="card mb-3">
               <div class="row g-0">
@@ -109,54 +109,98 @@
           </div>
 
           <!--Checkout form-->
-        <form id="checkoutForm" >
-          <h1 class="titulo" id="h1TextoDatos">Datos de usuario</h1>
-          <div class="inputCheckoutForm">
-            <label for="nombre" class="texto-navegacion">Nombre</label>
-            <input type="text" id="nombre" name="nombre" class="texto-navegacion" disabled>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="correo" class="texto-navegacion">Email</label>
-            <input type="text" id="correo" name="correo" class="texto-navegacion" disabled>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="direccion" class="texto-navegacion">Direccion</label>
-            <input type="text" id="direccion" name="direccion" class="texto-navegacion" disabled>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="puntoDeEntrega" class="texto-navegacion">Punto de entrega</label><br>
-            <select name="puntoDeEntrega" id="puntoDeEntrega">
-              <option value="" class="texto-navegacion">Selecione una opcion</option>
-            </select>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="metodoDePago" class="texto-navegacion">Metodo de pago</label><br>
-            <select name="metodoDePago" id="metodoDePago">
-              <option value=" " class="texto-navegacion">Seleecione una opcion</option>
-            </select>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="cantidadDeProductos" class="texto-navegacion">Cantidad de productos</label>
-            <input type="text" id="cantidadDeProductos" class="texto-navegacion" disabled>
-          </div>
-          <div class="inputCheckoutForm">
-            <label for="totalAPagar" class="texto-navegacion">TOTAL A PAGAR</label>
-            <input type="text" id="totalAPagar" class="texto-navegacion" disabled>
-          </div>
-          
-           <div class="atras">
-              <button id="atras" class="texto-navegacion"> VOLVER </button>
-           </div>
-           <div class="form-floating"> 
-            <p id="mensajeError" class="texto-navegacion"></p>
-          </div>
-          <div class="buttonCheckout">
-            <button id="buttonCheckout" type="submit" class="texto-navegacion">CONFIRMAR</button>
-          </div>
-        </form>
+          <form id="checkoutForm">
+            <h1 class="titulo" id="h1TextoDatos">Datos de usuario</h1>
+            <div class="inputCheckoutForm">
+              <label for="nombre" class="texto-navegacion">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="correo" class="texto-navegacion">Email</label>
+              <input
+                type="text"
+                id="correo"
+                name="correo"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="direccion" class="texto-navegacion">Direccion</label>
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="puntoDeEntrega" class="texto-navegacion"
+                >Tipo de entrega</label
+              ><br />
+              <select name="Tipo de entrega" id="puntoDeEntrega" required>
+                <option value="" class="texto-navegacion">
+                  Selecione una opcion
+                </option>
+              </select>
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="metodoDePago" class="texto-navegacion"
+                >Metodo de pago</label
+              ><br />
+              <select name="Metodo de pago" id="metodoDePago" required>
+                <option value="" class="texto-navegacion">
+                  Seleecione una opcion
+                </option>
+              </select>
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="cantidadDeProductos" class="texto-navegacion"
+                >Cantidad de productos</label
+              >
+              <input
+                type="text"
+                id="cantidadDeProductos"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="totalAPagar" class="texto-navegacion"
+                >TOTAL A PAGAR</label
+              >
+              <input
+                type="text"
+                id="totalAPagar"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
 
+            <div class="atras">
+              <button id="atras" class="texto-navegacion">VOLVER</button>
+            </div>
+            <div class="form-floating">
+              <p id="mensajeError" class="texto-navegacion"></p>
+            </div>
+            <div class="buttonCheckout">
+              <button
+                id="buttonCheckout"
+                type="submit"
+                class="texto-navegacion"
+              >
+                CONFIRMAR
+              </button>
+            </div>
+          </form>
         </div>
-
       </div>
       <!--Aqui termina todo el contenido-->
       <div class="footer-container">
@@ -168,10 +212,10 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <script
+    <script
       type="module"
       src="../javaScripts/checarLocalStoragePages.js"
-    ></script> 
+    ></script>
     <script type="module" src="../JavaScripts/checkout.js"></script>
     <script type="module" src="../javaScripts/navbarOpciones.js"></script>
     <script
