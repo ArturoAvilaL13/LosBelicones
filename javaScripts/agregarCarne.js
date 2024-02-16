@@ -142,6 +142,6 @@ carneForm.onsubmit = async (e) => {
       mensajeImagen.innerText = "Ninguna Imagen seleccionada";
       divImagen.style.display = "none";
       imagen.style.display = "none";
-    }, 5000);
+    }, 3000);
   }
 };
