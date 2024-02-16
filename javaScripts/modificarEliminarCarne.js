@@ -149,9 +149,9 @@ const desplegarTodosLosCortes = async () => {
 };
 
 const desplegarTodosLosCortesInicio = async () => {
-  carnesCompletas = await getCarnesFromDB();
   const response = await getTiposDeCarnes();
-
+  carnesCompletas = await getCarnesFromDB();
+  console.log(carnesCompletas);
   while (divCortes.firstChild) {
     divCortes.removeChild(divCortes.firstChild);
   }
