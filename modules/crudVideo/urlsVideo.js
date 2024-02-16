@@ -23,8 +23,8 @@ const deleteCarneByIdURL = `${baseURL}carne/`;
 export {
   postVideoURL,
   getVideosURL,
- 
- /* getCarneByIdURL,
+
+  /* getCarneByIdURL,
   getCarnesByTipoURL,
   putCarneByIdURL,
   deleteCarneByIdURL,
