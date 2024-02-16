@@ -16,8 +16,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 10px;
-    background-color: #D9D9D9;
-    box-shadow: 15px 15px 20px rgb(0, 0, 0);
+    background-color: none;
     border-radius: 3px;
     margin-bottom: 5%;
     row-gap: 3px;
@@ -26,8 +25,11 @@
   .card {
     border-radius: 0px;
     border: none;
-    background: #D9D9D9;
-  }
+    background: none;
+    border: 2px #fff solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+    }
  /* #h1TextoDatos{
     color: #000000 !important;
   }*/

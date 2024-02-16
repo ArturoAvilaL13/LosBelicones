@@ -1,5 +1,6 @@
 import { getCarnes } from "../modules/crudCarne/crudCarne.js";
 import { getTiposDeCarnes } from "../modules/crudTipos/crudTipo.js";
+import { revisarLocalStorageCarrito, getLocalStorageCarrito, putLocalStorageCarrito, postLocalStorageCarrito} from "../modules/localStorage.js";
 
 const productosLista = document.getElementById("productos-lista");
 const carritoLista = document.getElementById("carrito-lista");
@@ -212,10 +213,12 @@ function actualizarContadorCarrito() {
 
 // Agregar producto al carrito
 window.agregarAlCarrito = (id, nombre, precio, imagen) => {
+  // const productoExistente = carrito.find((item) => item.id_carne === id);
+  // console.log(productoExistente)
   const productoExistente = carrito.find((item) => item.id_carne === id);
-
   if (productoExistente) {
     productoExistente.cantidad += 1;
+    localStorageCarrito(productoExistente.id_carne,productoExistente.cantidad)
   } else {
     carrito.push({
       id_carne: id,
@@ -224,11 +227,35 @@ window.agregarAlCarrito = (id, nombre, precio, imagen) => {
       imagen_carne: imagen,
       cantidad: 1,
     });
+    localStorageCarrito(id,1)
   }
-
+  
   mostrarCarritoVacio();
   actualizarCarrito();
   actualizarContadorCarrito();
+};
+
+function localStorageCarrito(id,cantidad){
+  /**
+   * idPedido se setea en 0
+   * idCarne
+   * cantidadCarne
+   */
+  if(revisarLocalStorageCarrito()){
+    const carrito = JSON.parse(getLocalStorageCarrito());//! esto lo ocupas is o si para el ticket
+    console.log(carrito)
+    const carritoItem = carrito.find((item) => item.idCarne === id)
+    if(carritoItem){
+      carritoItem.cantidadCarne = cantidad;
+    }else{
+      const productoAgregado = {idCarne:id,cantidadCarne:cantidad}
+      carrito.push(productoAgregado);
+    }
+    putLocalStorageCarrito(carrito)
+  }else{
+    const carrito = [{idCarne:id,cantidadCarne:cantidad}]
+    postLocalStorageCarrito(carrito)
+  }
 };
 
 // Eliminar una unidad de un producto del carrito
@@ -269,30 +296,28 @@ window.eliminarDelCarrito = (id) => {
 };
 
 // Proceso de pago
-// botonPago.addEventListener("click", () => {
-//   if (carrito.length === 0) {
-//     mostrarAlerta(
-//       "El carrito está vacío. Por favor, agrega productos antes de proceder con el pago."
-//     );
-//   } else {
-//     localStorage.setItem("carrito", JSON.stringify(carrito));
-//     window.open("ticket.html", "_blank");
-//     carrito = [];
-//     actualizarCarrito();
-//     actualizarContadorCarrito();
-//   }
-// });
+botonPago.addEventListener("click", () => {
+if (carrito.length === 0) {
+mostrarAlerta(
+ "El carrito está vacío. Por favor, agrega productos antes de proceder con el pago."
+ );
+} else {
+location.href= "../pages/checkout.html";
+carrito = [];
+actualizarCarrito();
+actualizarContadorCarrito();
+}
+});
 
-// Mostrar u ocultar la sección "Tu orden" al hacer clic en el ícono del carrito
-// carritoIcono.addEventListener("click", () => {
-//   tuOrden.style.display =
-//     tuOrden.style.display === "block" ? "none" : "block";
-// });
+//Mostrar u ocultar la sección "Tu orden" al hacer clic en el ícono del carrito
+carritoIcono.addEventListener("click", () => {
+   tuOrden.style.display =
+     tuOrden.style.display === "block" ? "none" : "block";
+ });
 
-// Función para cerrar la sección "Tu orden" al hacer clic en la "x"
-//   function cerrarTuOrden() {
-//     tuOrden.style.display = "none";
-//   }
-
-//   // Agregar evento al ícono de cerrar "x" de la sección "Tu orden"
-//   cerrarTuOrdenIcono.addEventListener("click", cerrarTuOrden);
+ //Función para cerrar la sección "Tu orden" al hacer clic en la "x"
+   function cerrarTuOrden() {
+    tuOrden.style.display = "none";
+  }
+ //Agregar evento al ícono de cerrar "x" de la sección "Tu orden"
+ cerrarTuOrdenIcono.addEventListener("click", cerrarTuOrden);

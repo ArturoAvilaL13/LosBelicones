@@ -1,5 +1,6 @@
 const usuario = "usuario";
 const tipoUsuario = "tipoUsuario";
+const carrito = "carrito";
 
 const revisarLocalStorageUsuario = () => {
   if (localStorage.getItem(usuario) !== null) {
@@ -7,6 +8,26 @@ const revisarLocalStorageUsuario = () => {
   }
   return false;
 };
+
+const revisarLocalStorageCarrito = () =>{
+if(localStorage.getItem(carrito)!==null){
+  return true;
+}
+return false;
+}
+
+const getLocalStorageCarrito= ()=>{
+  return localStorage.getItem(carrito);
+}
+
+const putLocalStorageCarrito = (object) =>{
+  localStorage.removeItem(carrito);
+  postLocalStorageCarrito(object);
+}
+
+const postLocalStorageCarrito = (object) =>{
+  localStorage.setItem(carrito,JSON.stringify(object));
+}
 
 const getLocalStorageUsuario = () => {
   return localStorage.getItem(usuario);
@@ -38,4 +59,8 @@ export {
   limpiarTodoElLocalStorage,
   enviarAIndexLocalStorage,
   tipoUsuarioLocalStorage,
+  revisarLocalStorageCarrito,
+  getLocalStorageCarrito,
+  putLocalStorageCarrito,
+  postLocalStorageCarrito
 };
