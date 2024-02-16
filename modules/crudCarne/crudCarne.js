@@ -23,7 +23,8 @@ async function getCarnes() {
     const data = await response.data;
     return data;
   } catch (error) {
-    console.log(error);
+    const vacio = { mensaje: "", object: null };
+    return vacio;
   }
 }
 
@@ -51,7 +52,7 @@ async function getCarnesByTipo(idTipo) {
 
 async function putCarne(carne) {
   try {
-    const url = `${putCarneByIdURL}${carne.idCarne}`;
+    const url = `${putCarneByIdURL}${Number(carne.idCarne)}`;
     const response = await axios.put(url, carne);
     const data = await response.data;
     return data;

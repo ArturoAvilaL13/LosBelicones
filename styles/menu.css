@@ -1,0 +1,147 @@
+.container #productos-lista {
+  background-color: #400118;
+  color: black;
+}
+h1 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  font-family: "Rubik Mono One", monospace;
+  text-align: center;
+  font-weight: 400;
+  size: 148px;
+  line-height: 30px;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  color: black;
+}
+
+/* Estilo personalizado para el icono de carrito */
+/* #carrito-icono {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: black;
+} */
+
+/* Estilo personalizado para la sección "Tu orden" */
+/* #tu-orden {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  max-width: 420px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+
+  z-index: 1000;
+} */
+
+/* Estilo personalizado para la lista de productos en "Tu orden" */
+/* #carrito-lista {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+} */
+
+/* Estilo personalizado para el botón de pagar en "Tu orden" */
+/* #boton-pago-tu-orden {
+  display: block;
+  width: 100%;
+}
+
+#alerta-pago {
+  z-index: 1000;
+}
+
+#productos-lista {
+  background-color: #860606;
+  border-radius: 5%;
+  border-style: groove;
+  border-color: #860606;
+} */
+
+.btn-primary {
+  background-color: #860606 !important; /* Color de fondo */
+  color: #fff !important; /* Color del texto */
+  border-color: #860606 !important; /* Color del borde */
+}
+
+.btn-primary:hover {
+  background-color: #400118 !important; /* Cambia el color de fondo al pasar el ratón por encima */
+  border-color: #400118 !important; /* Cambia el color del borde al pasar el ratón por encima */
+}
+
+/* #tu-orden {
+  font-family: "Rubik", sans-serif;
+} */
+
+.card {
+  color: black;
+  justify-content: center;
+}
+
+.row {
+  text-align: center !important;
+  border-radius: 30px;
+  border-width: 20px;
+  /*border-style:groove;*/
+  border-color: #860606;
+  gap: 50px;
+}
+
+.img-fluid {
+  width: 200px;
+  height: 200px;
+}
+
+#cart-counter {
+  font-family: "Rubik Mono One", monospace;
+  font-size: xx-large;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  margin-top: -30%;
+  margin-left: 60%;
+}
+
+#cerrar-tu-orden {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #400118;
+}
+
+#cerrar-tu-orden:hover {
+  color: #860606;
+}
+.ticket-container {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+}

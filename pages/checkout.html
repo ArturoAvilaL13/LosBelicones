@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Meat</title>
+    <link rel="shortcut icon" href="../img/svg/steak-svgrepo-com.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Styles/General.css" />
+    <link rel="stylesheet" href="../styles/checkout.css" />
+    <link rel="stylesheet" href="../Styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/select.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../pages/inicio.html"
+              ><img
+                src="../img/logos/logo1.png"
+                alt="MeetMeat"
+                target="_parent"
+                class="logo-nav"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title subtitulo" id="offcanvasNavbarLabel">
+                  Meet Meat
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul
+                  class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                  id="navbarOpcionesInicio"
+                ></ul>
+                <ul
+                  class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                  id="navbarOpcionesAdmin"
+                ></ul>
+                <ul
+                  class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                  id="navbarOpciones"
+                ></ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--Aqui va todo el contendo-->
+      <div id="content">
+        <div class="contenido">
+          <!--Titulo checkout -->
+          <div class="returnCart-titulo">
+            <h1 class="titulo" id="textoCheckout">CHECKOUT</h1>
+          </div>
+          <!--Lista de productos comprados -->
+
+          <div class="items" id="items">
+            <!-- <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="../img/fondocarbon.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Nombre del producto</h5>
+                    <p class="card-text">cantidad</p>
+                    <p class="card-text">Precio</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <!--Checkout form-->
+          <form id="checkoutForm">
+            <h1 class="titulo" id="h1TextoDatos">Datos de usuario</h1>
+            <div class="inputCheckoutForm">
+              <label for="nombre" class="texto-navegacion">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="correo" class="texto-navegacion">Email</label>
+              <input
+                type="text"
+                id="correo"
+                name="correo"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="direccion" class="texto-navegacion">Direccion</label>
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="puntoDeEntrega" class="texto-navegacion"
+                >Tipo de entrega</label
+              ><br />
+              <select name="Tipo de entrega" id="puntoDeEntrega" required>
+                <option value="" class="texto-navegacion">
+                  Selecione una opcion
+                </option>
+              </select>
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="metodoDePago" class="texto-navegacion"
+                >Metodo de pago</label
+              ><br />
+              <select name="Metodo de pago" id="metodoDePago" required>
+                <option value="" class="texto-navegacion">
+                  Seleecione una opcion
+                </option>
+              </select>
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="cantidadDeProductos" class="texto-navegacion"
+                >Cantidad de productos</label
+              >
+              <input
+                type="text"
+                id="cantidadDeProductos"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+            <div class="inputCheckoutForm">
+              <label for="totalAPagar" class="texto-navegacion"
+                >TOTAL A PAGAR</label
+              >
+              <input
+                type="text"
+                id="totalAPagar"
+                class="texto-navegacion"
+                disabled
+              />
+            </div>
+
+            <div class="atras">
+              <button id="atras" class="texto-navegacion">VOLVER</button>
+            </div>
+            <div class="form-floating">
+              <p id="mensajeError" class="texto-navegacion"></p>
+            </div>
+            <div class="buttonCheckout">
+              <button
+                id="buttonCheckout"
+                type="submit"
+                class="texto-navegacion"
+              >
+                CONFIRMAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--Aqui termina todo el contenido-->
+      <div class="footer-container">
+        <iframe
+          src="../pages/footer.html"
+          frameborder="0"
+          class="footer"
+        ></iframe>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      type="module"
+      src="../javaScripts/checarLocalStoragePages.js"
+    ></script>
+    <script type="module" src="../JavaScripts/checkout.js"></script>
+    <script type="module" src="../javaScripts/navbarOpciones.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

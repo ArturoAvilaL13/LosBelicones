@@ -1,0 +1,203 @@
+
+.container #productos-lista {
+    background-color: #400118;
+    color: black;
+  }
+
+  h1 {
+    border-bottom: 3px solid #eb953f;
+    padding-bottom: 5px;
+    font-family: 'Rubik Mono One', monospace;
+    text-align: center;
+    font-weight: 400;
+    size: 148px;
+    line-height: 30px;
+    color: #fff;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  li {
+    margin-bottom: 10px;
+  
+  }
+  
+  button {
+    cursor: pointer;
+    color: black;
+    
+  }
+  #content {
+    justify-content: start !important;
+    z-index: 0;
+  }
+
+  #carrito-icono:hover{
+    cursor: pointer;
+  }
+
+   /* Estilo personalizado para el icono de carrito */
+   #carrito-icono {
+    position: absolute!important;
+    margin-top: -1%;
+    margin-right: 15%;
+    color: #ffffff; 
+    width: 60px;
+    height: 55px;
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    right: 100px;
+    transform: translateX(30%);
+   
+  }
+
+  /* Estilo personalizado para la sección "Tu orden" */
+  #tu-orden {
+    position: fixed!important;
+    top: 100px!important;
+    left: 75%!important;
+    background-color: #ffffff!important;
+    width: 300px;
+    box-shadow: 0 10px 20px #000000;;
+    border-radius: 10px;
+    z-index:1 ;
+    border: 1px solid #000000;
+    padding: 10px;
+    color: black;
+  }
+
+  #tu-orden > h2 >#textTuOrden{
+    color: #ffffff;
+  }
+
+  @media screen and (min-width: 768px) {
+    #tu-orden {
+      display: flex;
+      flex-direction: column;
+     
+      padding-left: auto;
+    }
+  }
+
+
+  /* Estilo personalizado para la lista de productos en "Tu orden" */
+  #carrito-lista {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    
+  }
+
+  /* Estilo personalizado para el botón de pagar en "Tu orden" */
+  #boton-pago-tu-orden {
+    display: block;
+    width: 100%;
+  }
+  
+  #alerta-pago {
+    z-index: 1000;
+  }
+
+  .btn-primary{
+    background-color: #860606!important; /* Color de fondo */
+    color: #fff!important; /* Color del texto */
+    border-color: #860606!important; /* Color del borde */
+  }
+  
+  .btn-primary:hover {
+    background-color: #400118!important; /* Cambia el color de fondo al pasar el ratón por encima */
+    border-color: #400118!important; /* Cambia el color del borde al pasar el ratón por encima */
+  }
+  
+  
+
+  #cart-counter{
+    font-family: 'Rubik', monospace;
+    position: absolute;
+      top: 100%;
+      right: -50%;
+  
+      background-color: #000000;
+      color: #ffffff; 
+      width: 30px;
+      height: 25px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+  }
+  
+  #cerrar-tu-orden {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color:#eb953f;
+  }
+
+  #cart-empty-message{
+     padding: 20px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  #cerrar-tu-orden:hover {
+    color:#860606;
+  }
+
+  #tu-orden {
+    font-family: 'Rubik', sans-serif;
+    background-color: #400118;
+    width: 300px;
+    box-shadow: 0 10px 20px #000000;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    top: 50px; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente el div */
+    transform: translateX(-30%); /* Ajusta la posición horizontal */
+    margin-top: -10px; /* Superpone ligeramente con el navbar */
+  }
+  
+  /* Alineación del div tu-orden */
+  #tu-orden.below-svg {
+    top: calc(100% + 10px); /* Coloca el div justo debajo del SVG */
+    left: 50%; /* Centra horizontalmente el div */
+    transform: translateX(-30%); /* Ajusta la posición horizontal */
+  }
+
+  .card {
+    background-color: black!important;
+    justify-content: center;
+  }
+  
+  #productos-lista {
+    text-align: center !important;
+    border-radius: 30px;
+    border-width: 20px;
+    border-radius: 5px;
+    gap: 15px;
+  }
+  #productos-lista > .list-group-item{
+    background-color:#400118;
+    border: 1px solid #000000 !important;
+    border-radius: 15%;
+  }
+  .list-group-item > .img-fluid {
+    width: 200px;
+    height: 200px;
+  }
+  #tu-orden.below-svg {
+    top: calc(100% + 10px); /* Coloca el div justo debajo del SVG */
+    left: 50%; /* Centra horizontalmente el div */
+    transform: translateX(-30%); /* Ajusta la posición horizontal */
+  }
+  

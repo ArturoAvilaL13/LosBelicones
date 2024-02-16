@@ -1,3 +1,10 @@
+#agregarCarneDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #carneForm {
   max-height: fit-content;
   padding: 15px 15px;
@@ -47,7 +54,9 @@ select {
 
 #imagen {
   width: 95%;
+  max-width: 350px;
   height: 95%;
+  max-height: 350px;
 }
 
 .botonesFormulario {
@@ -82,5 +91,9 @@ select {
   }
   .botonesFormulario > button {
     width: 250px;
+  }
+  #agregarCarne {
+    max-width: 390px;
+    background-color: violet;
   }
 }

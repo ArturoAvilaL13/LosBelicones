@@ -14,6 +14,8 @@ import { getTiposDeCarnes } from "../modules/crudTipos/crudTipo.js";
 
 import { postCarne } from "../modules/crudCarne/crudCarne.js";
 
+import { desplegarTodosLosCortes } from "./modificarEliminarCarne.js";
+
 const carneForm = document.getElementById("carneForm");
 const tipoCarne = document.getElementById("tipoCarne");
 const nombreCarne = document.getElementById("nombre");
@@ -67,6 +69,7 @@ precio.addEventListener("input", (e) => {
 imagenArchivo.addEventListener("invalid", (e) => {
   validarVacio(e.target);
 });
+
 imagenArchivo.addEventListener("change", async (e) => {
   validarVacio(e.target);
   if (e.target.value === "") {
@@ -91,7 +94,7 @@ const mostrarImagen = async (imageFile) => {
 
 const obtenerTiposDeCarnes = async () => {
   const response = await getTiposDeCarnes();
-  console.log(response);
+  // console.log(response);
   const mensaje = response.mensaje;
   const datas = response.object;
   datas.forEach((data) => {
@@ -118,6 +121,7 @@ carneForm.onsubmit = async (e) => {
     fkIdTipoDeCorte: Number(tipoCarne.value), //*convertir a int
   };
   ///~Agregar conectividad a la api y hacer las variables necesarias
+  // console.log(carneValidada.imagenCarne);
   const response = await postCarne(carneValidada);
   const mensaje = response.mensaje;
   const data = response.object;
@@ -129,6 +133,8 @@ carneForm.onsubmit = async (e) => {
     }, 3000);
   } else {
     MensajeDelServidor.innerText = mensaje;
+    MensajeDelServidor.scrollIntoView({ behavior: "smooth" });
+    await desplegarTodosLosCortes();
     setTimeout(() => {
       MensajeDelServidor.innerText = "";
       carneForm.reset();
@@ -136,6 +142,6 @@ carneForm.onsubmit = async (e) => {
       mensajeImagen.innerText = "Ninguna Imagen seleccionada";
       divImagen.style.display = "none";
       imagen.style.display = "none";
-    }, 5000);
+    }, 3000);
   }
 };

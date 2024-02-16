@@ -22,6 +22,8 @@
     />
     <link rel="stylesheet" href="../Styles/General.css" />
     <link rel="stylesheet" href="../Styles/navbar.css" />
+    <link rel="stylesheet" href="../Styles/agregarVideo.css" />
+    <link rel="stylesheet" href="../Styles/agregarCarne.css" />
   </head>
   <body>
     <div id="container">
@@ -81,11 +83,67 @@
         </nav>
       </div>
       <!--Aqui va todo el contendo-->
-      <div id="content">
-
-        
-      </div>
-      
+    
+        <div id="content">
+          <h2 class="titulo">Agrega un video</h2>
+          <form id="videoForm">
+            <div class="form-floating mb-3">
+              <div class="input-group tamanoDiv borde-modificado">
+                <div class="select">
+                  <select
+                    class="texto-navegacion"
+                    id="tipoCarne"
+                    name="Tipo de carne"
+                    required
+                  >
+                    <option value="">Elige que tipo de corte es</option>
+                  </select>
+                  <div class="select_arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="url" class="form-control borde-modificado texto-navegacion text" id="urlVideo" name="urlVideo" placeholder=" " autocomplete="off" required>
+              <label for="urlVideo" class="texto-navegacion">URL del video de YouTube</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control borde-modificado texto-navegacion text"
+                id="titulo"
+                name="titulo"
+                placeholder=""
+                autocomplete="off"
+                required
+              />
+              <label for="nombre" class="texto-navegacion"
+                >Titulo del video</label
+              >
+            </div>
+            
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control borde-modificado texto-navegacion text"
+                id="descripcion"
+                name="descripcion"
+                placeholder=""
+                autocomplete="off"
+                required
+              />
+              <label for="descripcion" class="texto-navegacion"
+                >Breve descripcion</label
+              >
+            </div>
+            
+            <div class="botonesFormulario">
+              <button class="btn texto-navegacion borde-modificado" type="submit">Agregar Video</button>
+              <button class="btn texto-navegacion borde-modificado" type="reset">Resetear formulario</button>
+            </div>
+          </form>
+        </div>
+    
+    
       <!--Aqui termina todo el contenido-->
       <div class="footer-container">
         <iframe
@@ -94,11 +152,13 @@
           class="footer"
         ></iframe>
       </div>
-    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       type="module"
       src="../javaScripts/checarLocalStoragePages.js"
     ></script>
+    <script type="module" src="../javaScripts/agregarCarne.js"></script>
     <script type="module" src="../javaScripts/navbarOpciones.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

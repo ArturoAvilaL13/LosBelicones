@@ -1,0 +1,179 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0px;
+  background-color:#400118;
+  color: #fff ;
+  overflow: hidden;
+}
+.container #productos-lista {
+  background-color: #400118;
+  color: black;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+h1 {
+  border-bottom: 3px solid #eb953f;
+  padding-bottom: 5px;
+  font-family: 'Rubik Mono One', monospace;
+  text-align: center;
+  font-weight: 400;
+  size: 148px;
+  line-height: 30px;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+li {
+  margin-bottom: 10px;
+
+}
+
+button {
+  cursor: pointer;
+  color: black;
+  
+}
+#content {
+  justify-content: start !important;
+}
+
+#carrito-icono:hover{
+  cursor: pointer;
+}
+
+ /* Estilo personalizado para el icono de carrito */
+ #carrito-icono {
+  position: relative;
+  color: #ffffff; 
+  width: 70px;
+  height: 65px;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  color: black;
+  right: -1;
+  transform: translateX(30%);
+ 
+}
+
+/* Estilo personalizado para la sección "Tu orden" */
+#tu-orden {
+  font-family: 'Rubik', sans-serif;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #400118;
+  width: 300px;
+  box-shadow: 0 10px 20px #000000;;
+  border-radius: 10px;
+  display: none;
+  padding-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #tu-orden {
+    display: flex;
+    flex-direction: column;
+   
+    padding-left: auto;
+  }
+}
+
+
+/* Estilo personalizado para la lista de productos en "Tu orden" */
+#carrito-lista {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Estilo personalizado para el botón de pagar en "Tu orden" */
+#boton-pago-tu-orden {
+  display: block;
+  width: 100%;
+}
+
+#alerta-pago {
+  z-index: 1000;
+}
+
+.btn-primary{
+  background-color: #860606!important; /* Color de fondo */
+  color: #fff!important; /* Color del texto */
+  border-color: #860606!important; /* Color del borde */
+}
+
+.btn-primary:hover {
+  background-color: #400118!important; /* Cambia el color de fondo al pasar el ratón por encima */
+  border-color: #400118!important; /* Cambia el color del borde al pasar el ratón por encima */
+}
+
+
+
+#cart-counter{
+  font-family: 'Rubik', monospace;
+  position: absolute;
+    top: 70%;
+    right: 0;
+
+    background-color: #000000;
+    color: #ffffff; 
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#cerrar-tu-orden {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color:#eb953f;
+}
+
+#cart-empty-message{
+   padding: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+#cerrar-tu-orden:hover {
+  color:#860606;
+}
+
+#tu-orden {
+  font-family: 'Rubik', sans-serif;
+  background-color: #400118;
+  width: 300px;
+  box-shadow: 0 10px 20px #000000;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  top: 50px; /* Ajusta la posición vertical */
+  left: 50%; /* Centra horizontalmente el div */
+  transform: translateX(-30%); /* Ajusta la posición horizontal */
+  margin-top: -10px; /* Superpone ligeramente con el navbar */
+}
+
+/* Alineación del div tu-orden */
+#tu-orden.below-svg {
+  top: calc(100% + 10px); /* Coloca el div justo debajo del SVG */
+  left: 50%; /* Centra horizontalmente el div */
+  transform: translateX(-30%); /* Ajusta la posición horizontal */
+}

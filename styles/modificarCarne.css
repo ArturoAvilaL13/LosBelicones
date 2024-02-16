@@ -1,0 +1,51 @@
+#divModificarCarne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#divImagenModificar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: fit-content;
+  min-width: 300px;
+  gap: 10px;
+}
+
+.imagenModificar {
+  width: 300px;
+  height: 190px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 430px) {
+  #divImagenModificar {
+    max-width: 250px !important;
+    max-height: fit-content !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: auto;
+  }
+
+  .botonesFormulario {
+    width: 60%;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .botonesFormulario > button {
+    width: 250px;
+  }
+  /* #agregarCarne {
+    max-width: 390px;
+    background-color: violet;
+  } */
+}
