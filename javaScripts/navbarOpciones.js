@@ -13,6 +13,8 @@ const opcionesInicio = [
 const opciones = [
   { titulo: "Acerca de MEET MEAT", url: "./acercaDeNosotros.html", hr: false },
   { titulo: "¿Belic One's?", url: "./acercaDeBelicones.html", hr: false },
+  { titulo: "Meat Meet Videos", url: "./galery.html", hr: false },
+  { titulo: "Steak House", url: "./steakhouse.html", hr: false },
   { titulo: "¡Contactanos!", url: "./contactanos.html", hr: false },
   { titulo: "", url: "", hr: true },
   { titulo: "Modificar cuenta", url: "./modificarUsuario.html", hr: false },
@@ -26,6 +28,11 @@ const opcionesAdmin = [
   {
     titulo: "Agregar/Modificar/Eliminar Carnes",
     url: "./modificarEliminarCarne.html",
+    hr: false,
+  },
+  {
+    titulo: "Agregar/Modificar/Eliminar Videos",
+    url: "./modificarEliminarVideos.html",
     hr: false,
   },
   { titulo: "", url: "", hr: true },

@@ -1,10 +1,25 @@
+import{getVideos} from './modules/crudVideo/crudVideo.js';
+
+const obternerLink = async () => {
+    const response = await getVideos(videos);
+    const datosVideo= response.object;
+
+    llenarCarrusel(datosVideo);
+}
+
+function llenarCarrusel(datosVideo) {
+    urlVideo.value = datosVideo.urlVideo;
+    nombre.value = datosUsuario.nombre;
+    direccion.value = datosUsuario.direccion;
+  }
+
+  obtenerDatosUsuario();
+
 document.addEventListener('DOMContentLoaded', function () {
     const videoCarousel = document.getElementById('videoCarousel');
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
-    const videoIndicator = document.getElementById('videoIndicator');
-    const videoCounter = document.getElementById('videoCounter'); // Agregado
-
+   
     const videos = [
        /* { src: 'https://www.youtube.com/embed/TIZUOwIDsms?si=KryCHeGqeuNUd3JP', title: 'Chilaquiles de Diezmillo Especiales - Chefsita Andy', description: 'En este su primer receta en video, Chefsita Andy nos enseña una deliciosa versión de los chilaquiles verdes, con Diezmillo de Meet Meat y un toque especial para niños.' },*/
        { src: 'https://www.youtube.com/embed/JOYZDTpn4bg?si=W-bDq4m9f7YH780C', title: 'Somos Meet Meat', description: 'Esto y mucho más es Meet Meat' },
